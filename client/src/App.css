@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Responsive and Common Css */
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+a {
+    text-decoration: none;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+a:hover{
+    text-decoration: none;
+}

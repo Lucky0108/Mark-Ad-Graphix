@@ -1,0 +1,29 @@
+.navbar-nav a {
+    position: relative;
+}
+
+.navLink {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 25px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.navLink::after {
+    content: "";
+    position: absolute;
+    background-color: #000;
+    transition: all .3s;
+    width: 0px;
+    height: 3px;
+    display: block;
+}
+
+.navLink:hover {
+    color: #000;
+}
+
+.activeNavLink::after {
+    width: calc(100% - 3rem);
+}

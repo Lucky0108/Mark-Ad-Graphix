@@ -21,8 +21,8 @@ const NavbarComp = (props) => {
         <NavLink exact to="/" className="navLink" activeClassName="activeNavLink" >Home</NavLink>
         <NavLink to="/service" className="navLink" activeClassName="activeNavLink">Services</NavLink>
         <NavLink to="/about" className="navLink" activeClassName="activeNavLink">About Us</NavLink>
-        <NavLink to="/products" className="navLink" activeClassName="activeNavLink">Products</NavLink>
-        <NavLink to="/clients" className="navLink" activeClassName="activeNavLink">Clients</NavLink>
+        <NavLink to="/product" className="navLink" activeClassName="activeNavLink">Products</NavLink>
+        <NavLink to="/client" className="navLink" activeClassName="activeNavLink">Clients</NavLink>
         <NavLink to="/contact" className="navLink" activeClassName="activeNavLink">Contact Us</NavLink>
         </Nav>
     </Navbar.Collapse>

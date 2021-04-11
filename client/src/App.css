@@ -10,10 +10,35 @@ body {
 
 a {
     text-decoration: none;
-    -webkit-transition: all .2s;
-    transition: all .2s;
+    -webkit-transition: all ease .3s;
+    transition: all ease .3s;
+    color: #49B9ED;
 }
 
 a:hover{
     text-decoration: none;
+    color: #49B9ED;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700 !important;
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0 !important;
+}
+
+img {
+    max-width: 100%;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.section-padding {
+    padding: 100px 0;
 }

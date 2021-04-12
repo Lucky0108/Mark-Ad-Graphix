@@ -1,8 +1,9 @@
 import React from 'react'
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-import logoImg from '../../img/logo.jfif';
+// import logoImg from '../../img/logo.jfif';
 import './Navbar.css';
+import logoImg from '../../img/logo.png';
 
 /**
 * @author
@@ -12,7 +13,7 @@ import './Navbar.css';
 const NavbarComp = (props) => {
   return(
     <>
-    <Navbar className="navDiv" expand="lg">
+    <Navbar className="navDiv" fixed="top" expand="lg">
     <Container>
     <NavLink to='/' className="navbar-brand site-brand"><img src={logoImg} alt="Mark Ad Grapfix" /></NavLink>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />

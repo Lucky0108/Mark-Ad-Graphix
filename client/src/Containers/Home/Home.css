@@ -1,0 +1,87 @@
+.hero-section-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    height: 756px;
+}
+
+.introVideo {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    opacity: 0.2;
+    background-color: #000;
+    height: 100%;
+    object-fit: cover;
+    z-index: 3;
+}
+
+.midText {
+    z-index: 4;
+}
+
+.layer {
+    width: 100%;
+    text-align: center;
+}
+
+.layer span {
+    font-size: 3em;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.mouse-effect {
+    position: relative;
+    left: 50%;
+    padding: 1rem 1rem;
+    border: 2px solid #fff;
+    width: 30px;
+    height: 60px;
+    border-radius: 50px;
+    margin-top: 1.5rem;
+}
+
+.mouse-effect::before {
+    position: absolute;
+    /* top: 10px; */
+    content: '';
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 100%;
+    margin-left: -3px;
+    -webkit-animation: dotMotion 2s infinite ease;
+    animation: dotMotion 2s infinite ease;
+}
+
+@keyframes dotMotion {
+    0% {
+        top: 10px;
+        opacity: 0;
+      }
+      40% {
+        opacity: 1;
+      }
+      80% {
+        top: 40px;
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
+}
+
+.mouse-effect:hover {
+    cursor: pointer;
+    opacity: .5;
+}
+
+@media (max-width: 1400px ){
+    .hero-section-wrap {
+        height: 824px;
+    }
+}

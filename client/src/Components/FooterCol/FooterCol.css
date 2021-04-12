@@ -1,0 +1,9 @@
+.contact-elem {
+    display: flex;
+    justify-content: center;
+}
+
+.address-div-icon {
+    padding-top: .5rem;
+    margin-right: .7rem;
+}

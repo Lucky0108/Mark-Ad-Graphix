@@ -1,6 +1,7 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import FooterCol from '../FooterCol';
 import './Footer.css'
 
 /**
@@ -40,53 +41,16 @@ const Footer = (props) => {
             <div className="footer-contact-info mb-4">
             <Container>
             <Row>
-              <Col sm={12} md={4} lg={4}>
-                <div className="address-div contact-elem mb-5">
-                  <div className="address-div-icon">
-                  <i className="fa fa-map-marker fa-2x" aria-hidden="true"></i>
-                  </div>
-                  <div className="address-div-content">
-                  <h4 className="text-white">Find us: </h4>
-                  <span className="contact-address">Site 4, Plot No. 4/8, Sahibabad, Ghaziabad, Uttar Pradesh 201010
-                  <a className="address-btn" target="_blank" href="https://goo.gl/maps/oGYKip3cooD4Kp588" rel="noopener noreferrer" >
-                    Get Directions &nbsp;
-                    <i className="fa fa-location-arrow" aria-hidden="true"></i>
-                  </a>
-                  </span>
-                  </div>
-                </div>
-              </Col>
-              <Col sm={12} md={4} lg={4}>
-                <div className="contact-div contact-elem mb-5">
-                  <div className="address-div-icon">
-                  <i class="fa fa-phone fa-2x" aria-hidden="true"></i>
-                  </div>
-                  <div className="contact-div-content">
-                  <h4 className="text-white">Call us: </h4>
-                  <span className="contact-phone">
-                  <a href="/" target="_blank">+91 11 99999999</a>
-                  <span>, </span>
-                  <a href="/" className="ml-5px" target="_blank">99999999</a>
-                  <div className="contact-whatsapp">
-                    <a href="/" target="_blank"> <i className="fa fa-whatsapp"></i> &nbsp; +91 9899999999</a>
-                  </div>
-                  </span>
-                  </div>
-                </div>
-              </Col>
-              <Col sm={12} md={4} lg={4}>
-                <div className="mail-div contact-elem mb-5">
-                  <div className="address-div-icon">
-                  <i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i>
-                  </div>
-                  <div className="mail-div-content">
-                  <h4 className="text-white">Mail us: </h4>
-                  <span className="contact-mail">
-                    <a href="/" target="_blank">info@markadgraphix.in</a>
-                  </span>
-                  </div>
-                </div>
-              </Col>
+              <FooterCol  mainDiv="address-div" icon="fa-map-marker" contentDivName="address-div-content" heading="Find us:" 
+                span={ <span className="contact-address">Site 4, Plot No. 4/8, Sahibabad, Ghaziabad, Uttar Pradesh 201010 <a className="address-btn" target="_blank" href="https://goo.gl/maps/oGYKip3cooD4Kp588" rel="noopener noreferrer" > Get Directions &nbsp; <i className="fa fa-location-arrow" aria-hidden="true"></i> </a> </span>} 
+              />
+              <FooterCol mainDiv="contact-div" icon="fa-phone" contentDivName="contact-div-content" heading="Call us:" 
+                span={  <span className="contact-phone"> <a href="/" target="_blank">+91 11 99999999</a> <span>, </span> <a href="/" className="ml-5px" target="_blank">99999999</a> <div className="contact-whatsapp"> <a href="/" target="_blank"> <i className="fa fa-whatsapp"></i> &nbsp; +91 9899999999</a> </div> </span>} 
+              />   
+              <FooterCol mainDiv="mail-div" icon="fa-envelope-o" contentDivName="mail-div-content" heading="Mail us:" 
+                span={  <span className="contact-mail"> <a href="/" target="_blank">info@markadgraphix.in</a> </span> } 
+              />                   
+
             </Row>
             </Container>
             </div>

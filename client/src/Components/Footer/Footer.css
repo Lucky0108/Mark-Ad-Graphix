@@ -29,16 +29,6 @@
     line-height: 1.7;
 }
 
-.contact-elem {
-    display: flex;
-    justify-content: center;
-}
-
-.address-div-icon {
-    padding-top: .5rem;
-    margin-right: .7rem;
-}
-
 .contact-address {
     font-size: 1rem;
     color: #c7c6c7;

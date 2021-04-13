@@ -13,7 +13,7 @@ import logoImg from '../../img/logo.png';
 const NavbarComp = (props) => {
   return(
     <>
-    <Navbar className="navDiv" fixed="top" expand="lg">
+    <Navbar className="navDiv" variant="dark" fixed="top" expand="lg">
     <Container>
     <NavLink to='/' className="navbar-brand site-brand"><img src={logoImg} alt="Mark Ad Grapfix" /></NavLink>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />

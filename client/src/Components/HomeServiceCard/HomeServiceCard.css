@@ -1,0 +1,113 @@
+.service-ui {
+    position: relative;
+    margin: 10px 0 30px;
+}
+
+.service-ui .card {
+    position: relative;
+    height: 300px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.service-ui .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #2c2c2c;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(90px at 72% 12%);
+    transition: .5s ease-in-out;
+}
+
+.service-ui .card:hover::before {
+    clip-path: circle(150px at 83% -8%);
+}
+
+.service-ui .card .imgBox {
+    position: absolute;
+    top: 12%;
+    right: 15%;
+    transition: 0.5s;
+}
+
+.service-ui .card:hover .imgBox {
+    top: 3%;
+}
+
+.service-ui .card .imgBox i {
+    font-size: 70px;
+    color: #fff;
+}
+
+.service-ui .card .contentBox {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 110px;
+    transition: 1s;
+    text-align: center;  
+}
+
+.service-ui .card:hover .contentBox {
+    height: 150px;
+}
+
+.service-ui .card .contentBox h3 {
+    position: relative;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500 !important;
+}
+
+.service-ui .card .contentBox .service-card-para {
+    /* padding: 8px 20px; */
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.service-ui .card:hover .contentBox .service-card-para {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+
+.service-ui .card .contentBox .service-card-para p {
+    color: #fff;
+    line-height: 1.3;
+    margin: 0 5px;
+    transition: 0.5s;
+    font-size: 16px;
+}
+
+/* Responsive Css */
+
+@media only screen and (max-width:992px) {
+    .service-ui .card::before, .service-ui .card:hover:before {
+        clip-path: circle(90px at 80% 15%);
+    }
+
+    .service-ui .card .imgBox, .service-ui .card:hover .imgBox {
+        top: 5%;
+    }
+
+    .service-ui .card:hover .contentBox, .service-ui .card .contentBox {
+        height: 130px;
+    }
+
+    .service-ui .card:hover .contentBox .service-card-para, .service-ui .card .contentBox .service-card-para {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@media (max-width: 500px) {
+    .service-ui .card .imgBox, .service-ui .card:hover .imgBox {
+        top: 9%;
+        right: 11%;
+    }
+}

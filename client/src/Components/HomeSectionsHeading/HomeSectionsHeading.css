@@ -1,0 +1,25 @@
+.heading {
+    font: 700 3em/1 "Oswald", sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    padding: .25em 0 .325em;
+    text-align: center;
+    margin: 0 auto;
+    text-shadow: 0 0 80px rgb(255 255 255 / 50%);
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+
+.post-heading-para {
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+}
+
+@media only screen and (max-width:992px) {
+    .heading {
+        font: 700 2em/1 "Oswald", sans-serif;
+        margin-top: 60px;
+        line-height: 1.6;
+    }
+}

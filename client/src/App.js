@@ -1,5 +1,5 @@
 // Basic Imports
-import { Switch, Route } from 'react-router';
+import { Switch, Route, useLocation } from 'react-router';
 
 // Css Imports
 import './App.css';
@@ -16,8 +16,18 @@ import Footer from './Components/Footer';
 
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import { useEffect } from 'react';
 
 function App() {
+
+  const location = useLocation();
+  
+  
+  useEffect(() => {
+    // Go To Top Of Page When Component or Location Changes
+    window.scrollTo(0,0);
+  }, [location])
+
   return (
     <div className="App">
       <Navbar />

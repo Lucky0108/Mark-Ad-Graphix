@@ -9,7 +9,6 @@
 
 .navLink {
     font-size: 1rem;
-    font-weight: 600;
     padding: 10px 15px;
     color: #fff;
     text-transform: uppercase;
@@ -21,7 +20,7 @@
     background-color: #fff;
     transition: all .3s;
     width: 0px;
-    height: 3px;
+    height: 2px;
     display: block;
 }
 
@@ -31,6 +30,15 @@
 
 .activeNavLink::after {
     width: calc(100% - 3rem);
+}
+
+.navbar-scroll-color {
+    background: #000;
+    transition: all .5s;
+}
+
+.navbar-collapse {
+    transition: all .5s;
 }
 
 @media (max-width:992px) {

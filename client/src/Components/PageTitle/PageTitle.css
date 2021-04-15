@@ -1,0 +1,56 @@
+.header-banner-container {
+    background-image: url("../../img/header.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-banner-container .img-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(4, 3, 3, 0.6);
+    z-index: 0;
+}
+
+.page-title {
+    padding: 9rem 0;
+    position: relative;
+    width: max-content;
+    font: 700 3em/1 "Oswald", sans-serif !important;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 0.9;
+    text-shadow: 0 0 80px rgb(255 255 255 / 50%);
+}
+
+.page-title::after {
+    content: "";
+    background: #fff;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 8.5rem;
+}
+
+@media only screen and (max-width: 992px) {
+    .page-title {
+        padding: 7rem 0;
+        font-size: 2rem!important;
+    }
+
+    .page-title::after {
+        bottom: 6.6rem;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .page-title {
+        padding-top: 6.5rem;
+    }
+}

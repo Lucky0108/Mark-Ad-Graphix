@@ -39,7 +39,7 @@ const Home = (props) => {
       </section>
 
       {/* Services Section */}
-      <section className="home-services-section py-5 section-padding">
+      <section className="home-services-section py-5 section-padding animation-1">
         <Container>
           <Row>
             <HomeSectionsHeading heading="More than a National Sign & Maintenance Company" para="We bring brands to life through turnkey signage solutions, innovative brand elements and program management support services." />
@@ -57,7 +57,7 @@ const Home = (props) => {
       </section>
 
       {/* About Section */}
-      <section className="home-about-section">
+      <section className="home-about-section animation-2">
         <div className="home-about-wrap">
           <video src={aboutVid} className="aboutVideo" loop muted autoPlay />
           <div className="contentDiv">
@@ -79,7 +79,7 @@ const Home = (props) => {
       </section>
 
       {/* Products Section */}
-      <section className="home-product-section">
+      <section className="home-product-section animation-1">
         <div className="home-product-wrap">
           <div className="layer">
             <Container>
@@ -147,7 +147,7 @@ const Home = (props) => {
       </section>
 
       {/* Clients Section */}
-      <section className="home-client-section">
+      <section className="home-client-section animation-2">
         <div className="home-client-wrap">
           <div className="layer">
             <Container>
@@ -168,152 +168,152 @@ const Home = (props) => {
                 >
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/aditya.png" class="img-responsive" alt=" "/>
+                  <img src="https://signageindia.in/wp-content/uploads/2020/03/aditya.png" className="img-responsive" alt=" "/>
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/Untitled-1.png" class="img-responsive" alt=" "/>
+                  <img src="https://signageindia.in/wp-content/uploads/2020/03/Untitled-1.png" className="img-responsive" alt=" "/>
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/omaxe.png" class="img-responsive" alt=" "/>
+                  <img src="https://signageindia.in/wp-content/uploads/2020/03/omaxe.png" className="img-responsive" alt=" "/>
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/ashok.png" class="img-responsive" alt=" "/>
+                  <img src="https://signageindia.in/wp-content/uploads/2020/03/ashok.png" className="img-responsive" alt=" "/>
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/ansal.png" class="img-responsive" alt=" "/>
+                  <img src="https://signageindia.in/wp-content/uploads/2020/03/ansal.png" className="img-responsive" alt=" "/>
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/birlasoft-1.png" class="img-responsive" alt=" "/>
+                  <img src="https://signageindia.in/wp-content/uploads/2020/03/birlasoft-1.png" className="img-responsive" alt=" "/>
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/alpha-1.png" class="img-responsive" alt=" "/>
+                  <img src="https://signageindia.in/wp-content/uploads/2020/03/alpha-1.png" className="img-responsive" alt=" "/>
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/amway-1.png" class="img-responsive" alt=" "/>
+                  <img src="https://signageindia.in/wp-content/uploads/2020/03/amway-1.png" className="img-responsive" alt=" "/>
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/conver.png" class="img-responsive" alt=" "/>
+                  <img src="https://signageindia.in/wp-content/uploads/2020/03/conver.png" className="img-responsive" alt=" "/>
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/dlf-1.png" class="img-responsive" alt=" "/>
+                  <img src="https://signageindia.in/wp-content/uploads/2020/03/dlf-1.png" className="img-responsive" alt=" "/>
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/apollo.png" class="img-responsive" alt=" "/>
+                  <img src="https://signageindia.in/wp-content/uploads/2020/03/apollo.png" className="img-responsive" alt=" "/>
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/apollo-school.png" class="img-responsive" alt=" "/>
+                  <img src="https://signageindia.in/wp-content/uploads/2020/03/apollo-school.png" className="img-responsive" alt=" "/>
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/efunds-1.png" class="img-responsive" alt=" "/>
+                  <img src="https://signageindia.in/wp-content/uploads/2020/03/efunds-1.png" className="img-responsive" alt=" "/>
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/signage-clients.png" class="img-responsive" alt=" "/>
+                  <img src="https://signageindia.in/wp-content/uploads/2020/03/signage-clients.png" className="img-responsive" alt=" "/>
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/lcacoste.png" class="img-responsive" alt=" "/>
+                  <img src="https://signageindia.in/wp-content/uploads/2020/03/lcacoste.png" className="img-responsive" alt=" "/>
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/tata.png" class="img-responsive" alt=" "/>
+                  <img src="https://signageindia.in/wp-content/uploads/2020/03/tata.png" className="img-responsive" alt=" "/>
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/educomp-1.png" class="img-responsive" alt=" "/>
+                  <img src="https://signageindia.in/wp-content/uploads/2020/03/educomp-1.png" className="img-responsive" alt=" "/>
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/gulshan-1.png" class="img-responsive" alt=" "/>
+                  <img src="https://signageindia.in/wp-content/uploads/2020/03/gulshan-1.png" className="img-responsive" alt=" "/>
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/central.png" class="img-responsive" alt=" "/>
+                  <img src="https://signageindia.in/wp-content/uploads/2020/03/central.png" className="img-responsive" alt=" "/>
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/toshiba.png" class="img-responsive" alt=" "/>
+                  <img src="https://signageindia.in/wp-content/uploads/2020/03/toshiba.png" className="img-responsive" alt=" "/>
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/shroff.png" class="img-responsive" alt=" "/>
+                  <img src="https://signageindia.in/wp-content/uploads/2020/03/shroff.png" className="img-responsive" alt=" "/>
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/modern.png" class="img-responsive" alt=" "/>
+                  <img src="https://signageindia.in/wp-content/uploads/2020/03/modern.png" className="img-responsive" alt=" "/>
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/malasiye.png" class="img-responsive" alt=" "/>
+                  <img src="https://signageindia.in/wp-content/uploads/2020/03/malasiye.png" className="img-responsive" alt=" "/>
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/ndmc.png" class="img-responsive" alt=" "/>
+                  <img src="https://signageindia.in/wp-content/uploads/2020/03/ndmc.png" className="img-responsive" alt=" "/>
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/shimz.png" class="img-responsive" alt=" "/>
+                  <img src="https://signageindia.in/wp-content/uploads/2020/03/shimz.png" className="img-responsive" alt=" "/>
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/aditya.png" class="img-responsive" alt=" "/>
+                  <img src="https://signageindia.in/wp-content/uploads/2020/03/aditya.png" className="img-responsive" alt=" "/>
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/aditya.png" class="img-responsive" alt=" "/>
+                  <img src="https://signageindia.in/wp-content/uploads/2020/03/aditya.png" className="img-responsive" alt=" "/>
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/aditya.png" class="img-responsive" alt=" "/>
+                  <img src="https://signageindia.in/wp-content/uploads/2020/03/aditya.png" className="img-responsive" alt=" "/>
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/aditya.png" class="img-responsive" alt=" "/>
+                  <img src="https://signageindia.in/wp-content/uploads/2020/03/aditya.png" className="img-responsive" alt=" "/>
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/aditya.png" class="img-responsive" alt=" "/>
+                  <img src="https://signageindia.in/wp-content/uploads/2020/03/aditya.png" className="img-responsive" alt=" "/>
                   </div> 
                   </SwiperSlide>
               </Swiper>

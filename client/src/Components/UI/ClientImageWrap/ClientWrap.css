@@ -40,6 +40,8 @@
     transition: all .3s;
 }
 
+/* Responsive Css */
+
 @media (max-width: 992px) {
     .client-img-wrap {
         display: block !important;

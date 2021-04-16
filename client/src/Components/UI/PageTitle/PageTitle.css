@@ -38,6 +38,8 @@
     bottom: 8.5rem;
 }
 
+/* Responsive Css */
+
 @media only screen and (max-width: 992px) {
     .page-title {
         padding: 7rem 0;

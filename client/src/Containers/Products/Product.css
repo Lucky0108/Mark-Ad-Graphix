@@ -1,0 +1,73 @@
+.products-container {
+    max-width: 1170px !important;
+}
+
+.products-wrap {
+    padding: 6.5rem 0 2.5rem;
+    display: flex;
+    -webkit-flow-from: row wrap;
+    flex-flow: row wrap;
+}
+
+.contact-cta-div {
+    position: relative;
+    padding: 5rem 0;
+    width: 100%;
+    background-image: url('../../img/cta.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact-cta-div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(37, 208, 251, 0.8);
+}
+
+.contact-cta-div h2 {
+    position: relative;
+    color: #fff;
+    font-size: 42px;
+    width: 60%;
+    margin: auto;
+    line-height: 1.4;
+}
+
+.contact-cta-div a {
+    font-size: 16px;
+    position: relative;
+    color: #fff;
+    border: 1px solid #fff;
+    margin: 1rem .2em;
+    padding: .5em 1em;
+    display: inline-block;
+}
+
+.contact-cta-div a:hover {
+    background: #fff;
+    color: rgba(37, 208, 251, 0.8);
+}
+
+/* Responsive Css */
+
+@media (max-width:992px) {
+    .products-wrap {
+        padding: 2.25rem 0 0;
+    }
+
+    .contact-cta-div h2 {
+        width: 90%;
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .products-container {
+        padding: 0 15px;
+    }
+}

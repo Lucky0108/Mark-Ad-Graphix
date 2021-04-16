@@ -41,6 +41,8 @@
     transition: all .5s;
 }
 
+/* Responsive Css */
+
 @media (max-width:992px) {
     .navDiv {
         background: #000;

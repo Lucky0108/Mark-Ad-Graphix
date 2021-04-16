@@ -16,6 +16,8 @@
     text-align: center;
 }
 
+/* Responsive Css */
+
 @media only screen and (max-width:992px) {
     .heading {
         font: 700 2em/1 "Oswald", sans-serif;

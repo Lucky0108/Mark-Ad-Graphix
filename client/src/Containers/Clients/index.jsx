@@ -14,6 +14,7 @@ const Clients = (props) => {
   return(
     <>
     <PageTitle heading="Our Clients" />
+    <section className="clients-section">
     <Container>
     <div className="client-container">
       <ClientImageWrap 
@@ -68,6 +69,7 @@ const Clients = (props) => {
       />      
     </div>
     </Container>
+    </section>
     </>
   )
   }

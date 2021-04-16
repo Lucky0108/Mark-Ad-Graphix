@@ -167,6 +167,8 @@
     text-transform: capitalize;
 }
 
+/* Responsive Css */
+
 
 @media(max-width:768px) {
     .footer-wrapper {
@@ -182,7 +184,7 @@
     }
 
     .contact-elem {
-        justify-content: start;
+        justify-content: start !important;
     }
 
     .address-div-icon {

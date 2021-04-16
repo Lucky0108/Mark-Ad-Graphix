@@ -1,7 +1,9 @@
 import React from 'react'
-import PageTitle from '../../Components/PageTitle'
-import './Contact.css'
 import { Container, Row, Col } from 'react-bootstrap';
+import './Contact.css'
+
+// Component Import
+import PageTitle from '../../Components/UI/PageTitle'
 
 /**
 * @author

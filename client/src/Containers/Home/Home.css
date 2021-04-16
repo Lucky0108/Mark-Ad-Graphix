@@ -120,7 +120,6 @@
 
 /* Service Section  */
 .home-services-section {
-    /* background: url('../../img/2nd-bg.jpg') no-repeat; */
     background: rgb(109,2,28);
     background: linear-gradient(49deg, rgba(109,2,28,1) 0%, rgba(27,72,155,1) 74%);
     background-size: cover;
@@ -261,7 +260,6 @@
     width: 300px;
     height: 300px;
     box-shadow: 4px 13px 30px 1px rgb(252 56 56 / 20%);
-    /* box-shadow: 20px 20px 30px 5px rgb(252 56 56 / 20%); */
     flex-shrink: 0;
     border-radius: 20px;
     transform: translateX(-80px);
@@ -429,16 +427,6 @@
         text-align: center;
         padding: 0 30px;
     }
-
-    /* .product-swiper .swiper-pagination-bullet {
-        transform: translateX(-50%);
-    left: 50% !important;
-    top: 205px;
-    width: 100% !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    } */
 }
 
 @media only screen and (max-width:992px) {
@@ -506,4 +494,12 @@
         height: 824px;
     }
 
+}
+
+@media(min-width: 1200px) {
+    .product-swiper .swiper-pagination-bullets {
+        right: 20px;
+        bottom: auto !important;
+        left: auto !important;
+    }
 }

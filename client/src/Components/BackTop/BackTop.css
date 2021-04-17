@@ -1,0 +1,23 @@
+#back-top {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    border: solid 2px #49B9ED;
+    background: #49B9ED;
+    color: #FFF;
+    line-height: 42px;
+    text-align: center;
+    font-size: 1.35rem;
+    margin-right: 0.75rem;
+    margin-bottom: 0.75rem;
+    z-index: 99998;
+}
+
+#back-top .fa {
+    color: #FFF;
+}

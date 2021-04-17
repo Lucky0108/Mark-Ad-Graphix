@@ -12,7 +12,7 @@ const ProductCard = (props) => {
         <>
             <div className="product-card">
                 <div className="product-card-image">
-                    <Link to="/">
+                    <Link to="/product/hello">
                         <img src={props.img} alt={props.name} />
                         <div className="product-btn">
                             View Product
@@ -20,7 +20,7 @@ const ProductCard = (props) => {
                     </Link>
                 </div>
                 <div className="product-card-content">
-                    <Link to="/">
+                    <Link to="/product/hello">
                         {props.name}
                     </Link>
                 </div>

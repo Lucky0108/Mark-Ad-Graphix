@@ -1,8 +1,12 @@
+import { useEffect } from 'react';
+
 // Basic Imports
 import { Switch, Route, useLocation } from 'react-router';
 
 // Css Imports
 import './App.css';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 // Route Components Import
 import Navbar from './Components/Navbar';
@@ -13,10 +17,9 @@ import Product from './Containers/Products';
 import Client from './Containers/Clients';
 import Contact from './Containers/Contact';
 import Footer from './Components/Footer';
-
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
-import { useEffect } from 'react';
+import ProductPage from './Components/UI/ProductPage';
+import WhatsAppIcon from './Components/WhatsappIcon';
+import BackTop from './Components/BackTop';
 
 function App() {
 
@@ -38,8 +41,12 @@ function App() {
         <Route exact path="/product" component={Product} />
         <Route exact path="/client" component={Client} />
         <Route exact path="/contact" component={Contact} />
+        {/* <ProductPage /> */}
+        <Route exact path="/product/hello" component={ProductPage} />
       </Switch>
       <Footer />
+      <BackTop />
+      <WhatsAppIcon />
     </div>
   );
 }

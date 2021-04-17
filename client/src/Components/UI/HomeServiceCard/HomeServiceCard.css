@@ -70,7 +70,7 @@
     visibility: hidden;
 }
 
-.service-ui .card:hover .contentBox .service-card-para {
+.service-ui .card:hover .contentBox .service-card-para  {
     opacity: 1;
     visibility: visible;
     transition-delay: 0.5s;

@@ -55,6 +55,12 @@
 
 /* Responsive Css */
 
+@media(max-width: 768px) {
+    .contact-cta-div  {
+        background-image: none;
+    }
+}
+
 @media (max-width:992px) {
     .products-wrap {
         padding: 2.25rem 0 0;

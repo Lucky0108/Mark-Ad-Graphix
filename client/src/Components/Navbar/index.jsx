@@ -15,7 +15,7 @@ const NavbarComp = (props) => {
   const [expanded, setExpanded] = useState(false);
 
   const changeScrollColor = () => {
-    console.log(window.scrollY);
+    // console.log(window.scrollY);
     if(window.scrollY >= 100) {
       setNav(true)
     } else {

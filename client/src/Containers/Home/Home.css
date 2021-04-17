@@ -84,8 +84,8 @@
 
 /* Common Animation Css */
 
-/* .animation-1 h2,
-.animation-1 p {
+.animation-1 .section-heading h2,
+.animation-1 .section-heading p {
 	-webkit-transform: translateX(-1000px);
 	        transform: translateX(-1000px);
 	opacity: 0;
@@ -100,22 +100,22 @@
 				-webkit-transform .66s cubic-bezier(0.16, 0.68, 0.43, 0.99);
 }
 
-.animation-1.active h2,
-.animation-1.active p {
+.animation-1 .section-heading.active h2,
+.animation-1 .section-heading.active p {
 	-webkit-transform: translateY(0);
 	        transform: translateY(0);
 	opacity: 1;
 }
 
-.animation-1.active h2 {
-	-webkit-transition-delay: .44s;
-	        transition-delay: .44s;
-}
-
-.animation-1.active p {
+.animation-1 .section-heading.active h2 {
 	-webkit-transition-delay: .22s;
 	        transition-delay: .22s;
-} */
+}
+
+.animation-1 .section-heading.active p {
+	-webkit-transition-delay: .11s;
+	        transition-delay: .11s;
+}
 
 
 /* Service Section  */
@@ -430,6 +430,13 @@
 }
 
 @media only screen and (max-width:992px) {
+
+    .animation-1 .section-heading h2,
+    .animation-1 .section-heading p {
+        transform: translateX(0px) !important;
+        opacity: 1 !important;
+    }
+
     .heading {
         font: 700 2em/1 "Oswald", sans-serif;
         margin-top: 60px;

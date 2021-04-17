@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { Container, Row } from 'react-bootstrap';
+import Typewriter from "typewriter-effect";
 
 // Media Imports
 import introVid from '../../img/intro.mp4'
 import aboutVid from '../../img/about.mp4'
 import pro1 from '../../img/download.jfif'
+import pro2 from '../../img/pro2.jfif'
+import pro3 from '../../img/pro3.jfif'
+
 
 // Components Import
 import HomeServiceCard from '../../Components/UI/HomeServiceCard';
@@ -28,6 +32,41 @@ SwiperCore.use([Pagination, Autoplay, EffectFade]);
 **/
 
 const Home = (props) => {
+
+  const [serviceHeading, setServiceHeading] = useState(false);
+  const [aboutHeading, setAboutHeading] = useState(false);
+  const [productHeading, setProductHeading] = useState(false);
+  const [clientHeading, setClientHeading] = useState(false);
+
+  const scrollCoord = () => {
+    console.log(window.scrollY)
+    if(window.scrollY >= 200 && window.scrollY <= 1150) {
+      setServiceHeading(true)
+    } else {
+      setServiceHeading(false)
+    }
+
+    if(window.scrollY >= 1151 && window.scrollY <= 1860) {
+      setAboutHeading(true)
+    } else {
+      setAboutHeading(false)
+    }
+
+    if(window.scrollY >= 1861 && window.scrollY <= 2600) {
+      setProductHeading(true)
+    } else {
+      setProductHeading(false)
+    }
+
+    if(window.scrollY >= 2700 && window.scrollY <= 3700) {
+      setClientHeading(true)
+    } else {
+      setClientHeading(false)
+    }
+  }
+
+  window.addEventListener("scroll", scrollCoord);
+
   return (
     <>
 
@@ -37,7 +76,23 @@ const Home = (props) => {
           <video src={introVid} className="introVideo" loop muted autoPlay />
           <div className="contentDiv">
             <div className="layer">
-              <span>WE HAVE PARTNER NETWORK SPREAD ACROSS INDIA</span>
+            <Typewriter
+              options={{
+                autoStart: true,
+                loop: true
+              }}
+              onInit={(typewriter)=> {
+              typewriter
+              .typeString("We are mark ad grafix")
+              .pauseFor(1000)
+              .deleteAll()
+              .typeString("We have latest production technology")
+              .pauseFor(1000)
+              .deleteAll()
+              .typeString("We have partner network spread across india")
+              .start();
+              }}
+              />
             </div>
             <div className="mouse-effect"></div>
           </div>
@@ -48,7 +103,7 @@ const Home = (props) => {
       <section className="home-services-section py-5 section-padding animation-1">
         <Container>
           <Row>
-            <HomeSectionsHeading heading="More than a National Sign & Maintenance Company" para="We bring brands to life through turnkey signage solutions, innovative brand elements and program management support services." />
+            <HomeSectionsHeading headingClass={serviceHeading ? "active" : ""} heading="More than a National Sign & Maintenance Company" para="We bring brands to life through turnkey signage solutions, innovative brand elements and program management support services." />
           </Row>
           <Row>
             <HomeServiceCard imgIcon="fa-star" heading="Brand Implementation" para="We ensure your brand values are represented from design to installation." />
@@ -63,14 +118,14 @@ const Home = (props) => {
       </section>
 
       {/* About Section */}
-      <section className="home-about-section animation-2">
+      <section className="home-about-section animation-1">
         <div className="home-about-wrap">
           <video src={aboutVid} className="aboutVideo" loop muted autoPlay />
           <div className="contentDiv">
             <div className="layer">
               <Container>
                 <Row>
-                  <HomeSectionsHeading heading="The Signage Difference" para="Signage boasts over 58 years of experience implementing brands across a host of industries. The difference is our people and our processes. From healthcare to security, retail to automotive, our team consists of experts experienced within each of these fields, who understand our customers’ expectations and desires. Watch our video to learn more about The Signage Difference." />
+                  <HomeSectionsHeading headingClass={aboutHeading ? "active" : ""} heading="The Signage Difference" para="Signage boasts over 58 years of experience implementing brands across a host of industries. The difference is our people and our processes. From healthcare to security, retail to automotive, our team consists of experts experienced within each of these fields, who understand our customers’ expectations and desires. Watch our video to learn more about The Signage Difference." />
                 </Row>
                 <div className="video-btn">
                   <i className="fa fa-play fa-2x" aria-hidden="true"></i>
@@ -90,7 +145,7 @@ const Home = (props) => {
           <div className="layer">
             <Container>
               <Row>
-                <HomeSectionsHeading heading="Our Products" para="We offer a wide gamut of virtual advertising products including signboards, indoor reception signs, name plates, metal signs, ACP signs, directional/wayfinding, information directory, frosted films, LED display boards, LED signs, Corian and other miscellaneous jobs." />
+                <HomeSectionsHeading headingClass={productHeading ? "active" : ""} heading="Our Products" para="We offer a wide gamut of virtual advertising products including signboards, indoor reception signs, name plates, metal signs, ACP signs, directional/wayfinding, information directory, frosted films, LED display boards, LED signs, Corian and other miscellaneous jobs." />
                 <div className="product-carousel col-md-12">
                 <Swiper 
                   className="product-swiper"
@@ -118,7 +173,7 @@ const Home = (props) => {
                   </SwiperSlide>
                   <SwiperSlide>
                     <div className="product-slider-img">
-                      <img src={pro1} alt=" " />
+                      <img src={pro2} alt=" " />
                     </div>
                     <div className="product-slider-content">
                       <div className="product-slider-title">
@@ -132,7 +187,7 @@ const Home = (props) => {
                   </SwiperSlide>
                   <SwiperSlide>
                     <div className="product-slider-img">
-                      <img src={pro1} alt=" " />
+                      <img src={pro3} alt=" " />
                     </div>
                     <div className="product-slider-content">
                       <div className="product-slider-title">
@@ -153,12 +208,12 @@ const Home = (props) => {
       </section>
 
       {/* Clients Section */}
-      <section className="home-client-section animation-2">
+      <section className="home-client-section animation-1">
         <div className="home-client-wrap">
           <div className="layer">
             <Container>
               <Row>
-                <HomeSectionsHeading heading="Our Clients" para="We have proudly served wide spectrum industries such as real estate,education and training, finance companies, manufacturing, schools and colleges, healthcare, news channels, restaurant & hospitality sector, banks, MNCs as well as government organisations including MTNL, Bank of Baroda, ONGC, NDMC, etc.." />
+                <HomeSectionsHeading headingClass={clientHeading ? "active" : ""} heading="Our Clients" para="We have proudly served wide spectrum industries such as real estate,education and training, finance companies, manufacturing, schools and colleges, healthcare, news channels, restaurant & hospitality sector, banks, MNCs as well as government organisations including MTNL, Bank of Baroda, ONGC, NDMC, etc.." />
                 <div className="client-carousel col-md-12">
                 <Swiper
                   spaceBetween={30}

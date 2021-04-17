@@ -23,30 +23,23 @@ const Contact = (props) => {
                 <div className="contact-box">
                   <i className="fa fa-map-marker"></i>
                   <div className="contact-box-content">
-                    <b>Corporate office: </b>
-                    Site 4, Plot No. 4/8, Sahibabad, Ghaziabad, Uttar Pradesh 201010 (INDIA)
-                  </div>
-                </div>
-                <div className="contact-box">
-                  <i className="fa fa-map-marker"></i>
-                  <div className="contact-box-content">
-                    <b>Registered office: </b>
+                    <b>Corporate Office: </b>
                     Site 4, Plot No. 4/8, Sahibabad, Ghaziabad, Uttar Pradesh 201010 (INDIA)
                   </div>
                 </div>
                 <div className="contact-box">
                   <i className="fa fa-envelope-o"></i>
-                  <a className="contact-box-content" href="mailto:info@markadgrafix.in" target="_blank" rel="noopener noreferrer"> info@markadgrafix.in</a>
+                  <a className="contact-box-content" href="mailto:info@markadgrafix.in" target="_blank" rel="noopener noreferrer"> markadgrafix@gmail.com</a>
                 </div>
                 <div className="contact-box">
                   <i className="fa fa-phone"></i>
-                  <a href="tel: +91 9999999999" className="contact-box-content" target="_blank" rel="noopener noreferrer"> +91 9999999999</a>, &nbsp; <a href="tel: +91 9999999999" className="contact-box-content" target="_blank" rel="noopener noreferrer"> +91 9999999999</a>
+                  <a href="tel: +919810191865" className="contact-box-content" target="_blank" rel="noopener noreferrer"> +91 9810191865</a>, &nbsp; <a href="tel: 0120-4241246" className="contact-box-content" target="_blank" rel="noopener noreferrer"> 0120-4241246</a>
                 </div>
                 <div className="contact-box">
                   <i className="fa fa-thumbs-o-up"></i>
                   <div className="contact-box-content">
-                    We love to hear good things
-                    <b> ( <a href="/" className="contact-box-content" target="_blank" rel="noopener noreferrer">Review us </a> )</b>
+                    We appreciate every feedback.
+                    <b> ( <a href="https://www.google.com/search?q=mark+ad+grafix&tbm=lcl&sxsrf=ALeKk00Ydn6pDr_Lr5q0wUalyGM5CmrEAw%3A1618678801335&ei=ERR7YP32E_aR4-EP2Jqu8A0&oq=Mark&gs_l=psy-ab.3.1.35i39k1l3j0i67k1j0i273k1j0i67k1j0i273k1j0i433i67k1j0i263i433i20k1j0i433k1.22918.23519.0.24720.4.4.0.0.0.0.181.655.0j4.4.0....0...1c.1.64.psy-ab..0.4.653...0j0i433i131k1j0i263i20k1.0.WNOvl_cloN0#lrd=0x390cfb149c4b7d4f:0xdf92fc7ae9415531,3,,,&rlfi=hd:;si:16110216421887268145;mv:[[28.6799221,77.3215017],[28.6509752,77.2849947]]" className="contact-box-content" target="_blank" rel="noopener noreferrer">Review us </a> )</b>
                   </div>
                 </div>
               </div>

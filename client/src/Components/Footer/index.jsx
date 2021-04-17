@@ -20,7 +20,7 @@ const Footer = (props) => {
 
     // 2-D Array for Footer Icons List having links and Respective Name
     const SocialIconList = [
-      ["/", "fa-facebook"], ["/", "fa-linkedin"], ["/", "fa-twitter"]
+      ["https://www.linkedin.com/company/mark-ad-grafix/", "fa-facebook"], ["https://www.linkedin.com/company/mark-ad-grafix/", "fa-linkedin"], ["https://wa.me/+919810191865", "fa-whatsapp"]
     ]     
 
     // variable to render Links List
@@ -47,10 +47,10 @@ const Footer = (props) => {
                 span={ <span className="contact-address">Site 4, Plot No. 4/8, Sahibabad, Ghaziabad, Uttar Pradesh 201010 <a className="address-btn" target="_blank" href="https://goo.gl/maps/oGYKip3cooD4Kp588" rel="noopener noreferrer" > Get Directions &nbsp; <i className="fa fa-location-arrow" aria-hidden="true"></i> </a> </span>} 
               />
               <FooterCol mainDiv="contact-div" icon="fa-phone" contentDivName="contact-div-content" heading="Call us:" 
-                span={  <span className="contact-phone"> <a href="/" target="_blank">+91 11 99999999</a> <span>, </span> <a href="/" className="ml-5px" target="_blank">99999999</a> <div className="contact-whatsapp"> <a href="/" target="_blank"> <i className="fa fa-whatsapp"></i> &nbsp; +91 9899999999</a> </div> </span>} 
+                span={  <span className="contact-phone"> <a href="tel:+919810191865" target="_blank" rel="noopener noreferrer">+91 9810191865</a> <span>, </span> <a href="tel:0120-4241246" className="ml-5px" target="_blank" rel="noopener noreferrer">0120-4241246</a> <div className="contact-whatsapp"> <a href="https://wa.me/+919810191865" target="_blank" rel="noopener noreferrer"> <i className="fa fa-whatsapp"></i> &nbsp; +91 9810191865</a> </div> </span>} 
               />   
               <FooterCol mainDiv="mail-div" icon="fa-envelope-o" contentDivName="mail-div-content" heading="Mail us:" 
-                span={  <span className="contact-mail"> <a href="/" target="_blank">info@markadgraphix.in</a> </span> } 
+                span={  <span className="contact-mail"> <a href="/" target="_blank">markadgrafix@gmail.com</a> </span> } 
               />                   
 
             </Row>

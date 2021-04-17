@@ -6,28 +6,28 @@ import './ClientWrap.css';
 * @function ClientImageWrap
 **/
 
-const ClientImageWrap = (props) => {
+const ClientImageWrap = ({ img1, img2, img3, img4, alt1, alt2, alt3, alt4 }) => {
     return (
         <>
             <div className="d-flex client-img-wrap">
-                <div className="client-img-div">
+                <div className={img1 ? "client-img-div" : null }>
                     <div className="clearfix">
-                        <img src={props.img1} className="client-img" alt={props.alt1} />
+                        <img src={img1} className={img1 ? "client-img" : null} alt={alt1} />
                     </div>
                 </div>
-                <div className="client-img-div">
+                <div className={img2 ? "client-img-div" : null }>
                     <div className="clearfix">
-                        <img src={props.img2} className="client-img" alt={props.alt2} />
+                        <img src={img2} className={img2 ? "client-img" : null} alt={alt2} />
                     </div>
                 </div>
-                <div className="client-img-div">
+                <div className={img3 ? "client-img-div" : null }>
                     <div className="clearfix">
-                        <img src={props.img3} className="client-img" alt={props.alt3} />
+                        <img src={img3} className={img3 ? "client-img" : null} alt={alt3} />
                     </div>
                 </div>
-                <div className="client-img-div">
+                <div className={img4 ? "client-img-div" : null }>
                     <div className="clearfix">
-                        <img src={props.img4} className="client-img" alt={props.alt4} />
+                        <img src={img4} className={img4 ? "client-img" : null} alt={alt4} />
                     </div>
                 </div>
             </div>

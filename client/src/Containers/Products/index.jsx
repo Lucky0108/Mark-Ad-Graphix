@@ -15,9 +15,6 @@ import product8 from '../../img/pro8.jfif';
 import product9 from '../../img/pro9.jfif';
 import product10 from '../../img/pro10.jfif';
 import product11 from '../../img/pro11.jfif';
-import product12 from '../../img/pro12.jfif';
-import product13 from '../../img/pro13.jfif';
-import product14 from '../../img/pro14.jfif';
 
 
 // Component Import
@@ -36,20 +33,17 @@ const Products = (props) => {
       <section className="products-section">
       <Container className="products-container section-padding">
         <div className="products-wrap clearfix">
-        <ProductCard name="Wayfinding Signs & Totems" img={product1} />
-        <ProductCard name="Led Signs" img={product2} />
-        <ProductCard name="Acp Signs" img={product3} />
-        <ProductCard name="Metal Letters" img={product4} />
-        <ProductCard name="Reception Signs" img={product5} />
-        <ProductCard name="Corian Mandirs & Jobs" img={product6} />
-        <ProductCard name="Frosted Films & Graphic Works" img={product7} />
-        <ProductCard name="Name Plates" img={product8} />
-        <ProductCard name="Floor Information & directories" img={product9} />
-        <ProductCard name="Led Moving Message Signs" img={product10} />
-        <ProductCard name="Misc Works & Safety Signs" img={product11} />
-        <ProductCard name="Fire Signs" img={product12} />
-        <ProductCard name="Sign Boards" img={product13} />
-        <ProductCard name="Brand Fencing & Unipoles" img={product14} />
+        <ProductCard name="Banner Stand" img={product1} />
+        <ProductCard name="Canopies" img={product2} />
+        <ProductCard name="Acp Sign Boards" img={product3} />
+        <ProductCard name="Uni-pole Hoarding" img={product4} />
+        <ProductCard name="Wooden Cabinets " img={product5} />
+        <ProductCard name="Acrylic slim light Display" img={product6} />
+        <ProductCard name="Fabrication for Exhibitions" img={product7} />
+        <ProductCard name="Glow-sign Boards" img={product8} />
+        <ProductCard name="Neon Sign" img={product9} />
+        <ProductCard name="Water Dispensers" img={product10} />
+        <ProductCard name="Hording Sign Board" img={product11} />
         </div>
       </Container>
       <div className="contact-cta-div">

@@ -108,13 +108,13 @@
 }
 
 .animation-1 .section-heading.active h2 {
-	-webkit-transition-delay: .22s;
-	        transition-delay: .22s;
+	-webkit-transition-delay: .11;
+	        transition-delay: .11s;
 }
 
 .animation-1 .section-heading.active p {
-	-webkit-transition-delay: .11s;
-	        transition-delay: .11s;
+	-webkit-transition-delay: .05s;
+	        transition-delay: .05s;
 }
 
 

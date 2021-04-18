@@ -3,12 +3,10 @@ import React from 'react'
 import './Service.css'
 import PageTitle from '../../Components/UI/PageTitle'
 import { Container, Row, Col } from 'react-bootstrap';
-import service1 from '../../img/site.jpg'
-import service2 from '../../img/design-concept.jpg'
-import service3 from '../../img/prototype.jpg';
-import service4 from '../../img/world-class.jpg';
-import service5 from '../../img/signage-install.jpg';
-
+import service1 from '../../img/solvent.jpg'
+import service2 from '../../img/eco-solvent.png'
+import service3 from '../../img/multi-print.jpg';
+import service4 from '../../img/digital.jpg';
 /**
 * @author
 * @function Services
@@ -23,73 +21,59 @@ const Services = (props) => {
       <div className="services-wrap">
         <Row>
           <Col lg={6} md={6} sm={12} className="mb-4" style={{ overflow: "hidden"}}>
-            <h3>Site Investigaton & visualization </h3>
+            <h3>Solvent Printing Services </h3>
             <a href="#" target="_self" className="service-img-div">
-            <img src={service1} alt=" " />
+            <img src={service1} alt="Solvent Printing Machine" />
             </a>
             <div className="service-content">
-            Signage deployment is largely dependent on the site recce results and hence is the most critical to the success of the program. This process includes:
+            We Provide The Best Solvent Printing Services in the most cost and time effective way and we're proud of it. 
             <ul>
-              <li> - Effective route plan for the installation team to cover all the locations.</li>
-              <li> - Identify the right signage based on the space availability</li>
-              <li> - Identify installation requirements</li>
-              <li> - Take actual size for right creative adaptation and thereby production</li>
+              <li> - Choose one of the most popular large format printing technique.</li>
+              <li> - These prints are resistant to atmospheric factors such as UV radiations and more.</li>
+              <li> - High Quality and Durable Prints.</li>
+              <li> - Pixel Sharp Image Reproduction. </li>
             </ul>
             </div>
           </Col>
           <Col lg={6} md={6} sm={12} className="mb-4"  style={{ overflow: "hidden"}}>
-            <h3>Design Translation & Conceptualization </h3>
+            <h3>Eco Solvent Printing Services </h3>
             <a href="#" target="_self" className="service-img-div">
-            <img src={service2} alt=" " />
+            <img src={service2} alt="Eco Solvent Printing Machine" />
             </a>
             <div className="service-content">
-            We highly follow a saying “if it doesn’t sell it isn’t creative” Hence creating a good design become essence of its selling. Also estabalishing client expectations & taste while delivering valuable information. It commands attention through first impression.
+            We believe in providing the best and eco-friendly services to everyone so we also have Eco solvent printing services which includes: 
             <ul>
-              <li> - Graphic Designs</li>
-              <li> - Technical Drawings</li>
-              <li> - Reference Images</li>
+              <li> - Harmless to both health and environment.</li>
+              <li> - Extreme High Quality Print.</li>
+              <li> - More Scratch & Chemical Resistant.</li>
             </ul>
             </div>
           </Col>
           <Col lg={6} md={6} sm={12} className="mb-4"  style={{ overflow: "hidden"}}>
-            <h3>Prototyping & Approvals </h3>
+            <h3>Digital Printing Services </h3>
+            <a href="#" target="_self" className="service-img-div">
+            <img src={service4} alt="Digital Printing Machine" />
+            </a>
+            <div className="service-content">
+            We are well aware of the modernising world and that's why we also offer Digital Printing Services to provide best in class solutions.
+            <ul>
+              <li> - Best suitable for indoor uses.</li>
+              <li> - Also Environment Friendly. </li>
+              <li> - Faster process. </li>
+            </ul>
+            </div>
+          </Col>
+          <Col lg={6} md={6} sm={12} className="mb-4"  style={{ overflow: "hidden"}}>
+            <h3>Multiple Printing Machines</h3>
             <a href="#" target="_self" className="service-img-div">
             <img src={service3} alt=" " />
             </a>
             <div className="service-content">
-            Engineering design record and specification requirements are properly understood that the process has the potential to produce product consistently meeting these requirements during an actual production run at the quoted production rate. In a Project it helps:
+            Multiple printing machines  gives us the flexibility to offer the most cost effective and efficient printing solution to meet all your needs.
             <ul>
-              <li> - To Ensure that the approved Sign can meet the manufacturability and quality requirements.</li>
-              <li> - Provides Clear undersatnding to the client that the design and specification approved are clearly understood and fulfilled.</li>
-              <li> - We are Good to go for Production with or without any changes.</li>
-            </ul>
-            </div>
-          </Col>
-          <Col lg={6} md={6} sm={12} className="mb-4"  style={{ overflow: "hidden"}}>
-            <h3>World Class Development </h3>
-            <a href="#" target="_self" className="service-img-div">
-            <img src={service4} alt=" " />
-            </a>
-            <div className="service-content">
-            This is the part where one needs to be careful as it involves both, huge effort and cost at. It comprises of:
-            <ul>
-              <li> - Finalizing the message content for the signage</li>
-              <li> - Artwork adaptation based on brand guidelines and the site recce</li>
-              <li> - Training the field team to accommodate adjustments</li>
-              <li> - An exclusive project team for end to end coordination of the entire project with the client and regional teams</li>
-            </ul>
-            </div>
-          </Col>
-          <Col lg={6} md={6} sm={12}  style={{ overflow: "hidden"}}>
-            <h3> Installation all-over India </h3>
-            <a href="#" target="_self" className="service-img-div">
-            <img src={service5} alt=" " />
-            </a>
-            <div className="service-content">
-            Installation teams are deputed to make ensure:
-            <ul>
-              <li> - The each sign is neatly installed at the desired location.</li>
-              <li> - Installtion progress & complete Installtion pictures sharing with the clients .</li>
+              <li> - To Provide All The Requirements in a way which is more time effective.</li>
+              <li> - To Offer A Cost Effective Solution Of Your need.</li>
+              <li> - We are here to provide everyt solution in the most effective way.</li>
             </ul>
             </div>
           </Col>

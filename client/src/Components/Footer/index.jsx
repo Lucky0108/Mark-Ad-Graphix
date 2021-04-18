@@ -20,7 +20,7 @@ const Footer = (props) => {
 
     // 2-D Array for Footer Icons List having links and Respective Name
     const SocialIconList = [
-      ["https://www.linkedin.com/company/mark-ad-grafix/", "fa-facebook"], ["https://www.linkedin.com/company/mark-ad-grafix/", "fa-linkedin"], ["https://wa.me/+919810191865", "fa-whatsapp"]
+      ["https://wa.me/+919810191865", "fa-whatsapp"], ["https://www.linkedin.com/company/mark-ad-grafix/", "fa-linkedin"] 
     ]     
 
     // variable to render Links List
@@ -86,7 +86,8 @@ const Footer = (props) => {
           </div>
         </div>
         <div className="footer-copyright-wrap clearfix">
-            Copyright © 2021 | Mark Ad Grapfix. All Rights Reserved. Designed By <a href="https://lakshayyadav.me" target="_blank" rel="noopener noreferrer">LAKSHAY</a>
+            {/* Copyright © 2021 | Mark Ad Grapfix. All Rights Reserved.  */}
+            Designed By <a href="https://lakshayyadav.me" target="_blank" rel="noopener noreferrer">LAKSHAY</a>
         </div>
       </section>      
     </footer>

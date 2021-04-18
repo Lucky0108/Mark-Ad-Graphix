@@ -9,6 +9,12 @@ import aboutVid from '../../img/about.mp4'
 import pro1 from '../../img/download.jfif'
 import pro2 from '../../img/pro2.jfif'
 import pro3 from '../../img/pro3.jfif'
+import client1 from '../../img/allen-solly.png'
+import client2 from '../../img/trends.png'
+import client3 from '../../img/Louis.png'
+import client4 from '../../img/van-heusen.png'
+import client5 from '../../img/planet.jpg'
+import client6 from '../../img/stanmax.png'
 
 
 // Components Import
@@ -86,10 +92,10 @@ const Home = (props) => {
               .typeString("We are mark ad grafix")
               .pauseFor(1000)
               .deleteAll()
-              .typeString("We have latest production technology")
+              .typeString("We provide consistent superior quality")
               .pauseFor(1000)
               .deleteAll()
-              .typeString("We have partner network spread across india")
+              .typeString("We have hi-tech equipment from Japan and China")
               .start();
               }}
               />
@@ -103,13 +109,13 @@ const Home = (props) => {
       <section className="home-services-section py-5 section-padding animation-1">
         <Container>
           <Row>
-            <HomeSectionsHeading headingClass={serviceHeading ? "active" : ""} heading="More than a National Sign & Maintenance Company" para="We bring brands to life through turnkey signage solutions, innovative brand elements and program management support services." />
+            <HomeSectionsHeading headingClass={serviceHeading ? "active" : ""} heading="Not Your Regular Signage Company" para="The high-speed, hi-tech equipment from Japan and China provides us with a fast turnaround and consistently superior quality." />
           </Row>
           <Row>
-            <HomeServiceCard imgIcon="fa-star" heading="Brand Implementation" para="We ensure your brand values are represented from design to installation." />
-            <HomeServiceCard imgIcon="fa-home" heading="Signs & Brand Elements" para="We install and maintain brand elements using the latest technology and materials." />
-            <HomeServiceCard imgIcon="fa-file" heading="Program Management" para="We take care of everything from site surveys to vendor management." />
-            <HomeServiceCard imgIcon="fa-wrench" heading="Repair & Maintenance" para="We provide ongoing maintenance and repair services." />
+            <HomeServiceCard imgIcon="fa-file" heading="Solvent Printing Services" para="We make sure you get the best printing services." />
+            <HomeServiceCard imgIcon="fa-leaf" heading="Eco Solvent Printing" para="We ensure to take care of your health and that of the environment." />
+            <HomeServiceCard imgIcon="fa-print" heading="Digital Printing" para="We are well up to date with modern digital printings." />
+            <HomeServiceCard imgIcon="fa-star" heading="Signage Services" para="We provide the most time and cost-efficient services." />
           </Row>
           <div className="home-common-btn-div">
             <Link to="/service" className="home-common-btn">Know More</Link>
@@ -125,7 +131,7 @@ const Home = (props) => {
             <div className="layer">
               <Container>
                 <Row>
-                  <HomeSectionsHeading headingClass={aboutHeading ? "active" : ""} heading="The Signage Difference" para="Signage boasts over 58 years of experience implementing brands across a host of industries. The difference is our people and our processes. From healthcare to security, retail to automotive, our team consists of experts experienced within each of these fields, who understand our customers’ expectations and desires. Watch our video to learn more about The Signage Difference." />
+                  <HomeSectionsHeading headingClass={aboutHeading ? "active" : ""} heading="Your Signage Solution" para="Mark Ad Grafix, since 1990, a high quality outdoor media printing house is modernized at every level, sourcing equipment from the best of international manufacturers. Their passion for good quality printing and design, deep knowledge and understanding of technology involved,  saw the dream become a successful reality." />
                 </Row>
                 <div className="video-btn">
                   <i className="fa fa-play fa-2x" aria-hidden="true"></i>
@@ -145,7 +151,7 @@ const Home = (props) => {
           <div className="layer">
             <Container>
               <Row>
-                <HomeSectionsHeading headingClass={productHeading ? "active" : ""} heading="Our Products" para="We offer a wide gamut of virtual advertising products including signboards, indoor reception signs, name plates, metal signs, ACP signs, directional/wayfinding, information directory, frosted films, LED display boards, LED signs, Corian and other miscellaneous jobs." />
+                <HomeSectionsHeading headingClass={productHeading ? "active" : ""} heading="Our Products" para="Mark Ad Grafix offers a wide range of printing products that meet international standards and varied requirements of our esteemed customers. Our product range include like Banner Stand, Canopies, Acrylic slim light Display and Fabrication for Exhibitions & Glow-sign Boards, ACP Glow-sign boards, Uni-pole Hoarding, Wooden Cabinets etc." />
                 <div className="product-carousel col-md-12">
                 <Swiper 
                   className="product-swiper"
@@ -158,43 +164,42 @@ const Home = (props) => {
                 >
                   <SwiperSlide>
                     <div className="product-slider-img">
-                      <img src={pro1} alt=" " />
+                      <img src={pro1} alt="Acp Signs" />
                     </div>
                     <div className="product-slider-content">
                       <div className="product-slider-title">
-                          <Link to="/portfolio">Wayfinding Signs & Totems</Link>
+                          <Link to="/portfolio">ACP Signs</Link>
                       </div>
                       <div className="product-slider-text">
-
-                      Way finding systems are unique to each place and visitors. The function of a sign is to identify, inform, direct, honor, restrict or permit. A good sign system recedes into the background while providing clear information when needed. Successfully designed signage helps visitors find their way, makes information accessible, provides an enhanced experience. In addition, an inclusive assessment of the environment and issues that affect orientation for first time visitors…									
+                      Acp signs are here to replace your old basic sign boards which gives a premium, elegant and classy looking signage for your brand which along with computerise cut letters &amp; LED lit logos. They provide great visibility even from great distances. They are easy to maintain and durable.								
                       </div>
                       <Link to="/client" className="home-common-btn">View All</Link>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
                     <div className="product-slider-img">
-                      <img src={pro2} alt=" " />
+                      <img src={pro2} alt="Neon Sign" />
                     </div>
                     <div className="product-slider-content">
                       <div className="product-slider-title">
-                          <Link to="/portfolio">Acp Signs</Link>
+                          <Link to="/portfolio">Neon Signs</Link>
                       </div>
                       <div className="product-slider-text">
-           						ACP signs is a premium option over basic sign boards wherein one can have a premium looking signage for his business along with comuterised cut letters &amp; logos LED lit. It offers an extensive range of basic colors to wooden shades to marble shades to even earthy shades. ACP signs is a premium option over basic sign boards wherein one can have a premium looking signage for his business along…									
+                        Neon signs are special electrical signs that are lighted by long gas tubes that contain neon or other gases. Their most common use is of neon lightning. They are a important part of signage industry and they have a very long lifetime. Neon tube signs are made by bending glass tubes into shapes.	
                       </div>
                       <Link to="/client" className="home-common-btn">View All</Link>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
                     <div className="product-slider-img">
-                      <img src={pro3} alt=" " />
+                      <img src={pro3} alt="Banner Stands" />
                     </div>
                     <div className="product-slider-content">
                       <div className="product-slider-title">
-                          <Link to="/portfolio">LED Signs</Link>
+                          <Link to="/portfolio">Banner Stands</Link>
                       </div>
                       <div className="product-slider-text">
-                      A LED letter sign is a three-dimensional sign element. It is fabricated from stainless steel and acrylic, thus it will not rust. LED letters are eye-catching and the most preferred choice when it comes to exterior signs. These signs are usually used as fixtures on parts of a building. LED letter signs enhance the overall look of the sign itself and add a lighting effect on the surrounding building façade...
+                      A Banner Stand is an excellent choice for portable display. They come in different variety of styles such as fixed stands, Expandable stands, X-style stands and Retractable stands. Retail stores uses Banner stand for marketing and to display their new products. You may see them in store windows and throught malls.
                       </div>
                       <Link to="/client" className="home-common-btn">View All</Link>
                     </div>
@@ -213,15 +218,16 @@ const Home = (props) => {
           <div className="layer">
             <Container>
               <Row>
-                <HomeSectionsHeading headingClass={clientHeading ? "active" : ""} heading="Our Clients" para="We have proudly served wide spectrum industries such as real estate,education and training, finance companies, manufacturing, schools and colleges, healthcare, news channels, restaurant & hospitality sector, banks, MNCs as well as government organisations including MTNL, Bank of Baroda, ONGC, NDMC, etc.." />
+                <HomeSectionsHeading headingClass={clientHeading ? "active" : ""} heading="Our Clients" para="Within a short span of time, we at Mark Ad Grafix had the opportunity to work with many renowned organizations in the country. Our commitment, dedication to produce the best of the best results and aspiration to give the very best to the our clients at economical prices has eabled us to reach our vision. " />
                 <div className="client-carousel col-md-12">
                 <Swiper
                   spaceBetween={30}
-                  slidesPerView={5}
-                  slidesPerColumn={2}
-                  slidesPerGroup={5}
-                  slidesPerColumnFill="row"
-                  grabCursor={true}
+                  centeredSlides
+                  // slidesPerView={5}
+                  // slidesPerColumn={2}
+                  // slidesPerGroup={5}
+                  // slidesPerColumnFill="row"
+                  // grabCursor={true}
                   onSwiper={(swiper) => console.log(swiper)}
                   pagination={{ clickable: true }}
                   autoplay = {{ delay: 2500, disableOnInteraction: false}}
@@ -229,154 +235,35 @@ const Home = (props) => {
                 >
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/aditya.png" alt=" "/>
+                  <img src={client1} alt=" "/>
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/Untitled-1.png" alt=" "/>
+                  <img src={client2} alt=" " />
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/omaxe.png" alt=" "/>
+                  <img src={client3} alt=" " />
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/ashok.png" alt=" "/>
+                  <img src={client4} alt=" " />
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/ansal.png" alt=" "/>
+                  <img src={client5} alt=" " />
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/birlasoft-1.png" alt=" "/>
+                  <img src={client6} alt=" " />
                   </div> 
                   </SwiperSlide>
-                  <SwiperSlide>
-                  <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/alpha-1.png" alt=" "/>
-                  </div> 
-                  </SwiperSlide>
-                  <SwiperSlide>
-                  <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/amway-1.png" alt=" "/>
-                  </div> 
-                  </SwiperSlide>
-                  <SwiperSlide>
-                  <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/conver.png" alt=" "/>
-                  </div> 
-                  </SwiperSlide>
-                  <SwiperSlide>
-                  <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/dlf-1.png" alt=" "/>
-                  </div> 
-                  </SwiperSlide>
-                  <SwiperSlide>
-                  <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/apollo.png" alt=" "/>
-                  </div> 
-                  </SwiperSlide>
-                  <SwiperSlide>
-                  <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/apollo-school.png" alt=" "/>
-                  </div> 
-                  </SwiperSlide>
-                  <SwiperSlide>
-                  <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/efunds-1.png" alt=" "/>
-                  </div> 
-                  </SwiperSlide>
-                  <SwiperSlide>
-                  <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/signage-clients.png" alt=" "/>
-                  </div> 
-                  </SwiperSlide>
-                  <SwiperSlide>
-                  <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/lcacoste.png" alt=" "/>
-                  </div> 
-                  </SwiperSlide>
-                  <SwiperSlide>
-                  <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/tata.png" alt=" "/>
-                  </div> 
-                  </SwiperSlide>
-                  <SwiperSlide>
-                  <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/educomp-1.png" alt=" "/>
-                  </div> 
-                  </SwiperSlide>
-                  <SwiperSlide>
-                  <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/gulshan-1.png" alt=" "/>
-                  </div> 
-                  </SwiperSlide>
-                  <SwiperSlide>
-                  <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/central.png" alt=" "/>
-                  </div> 
-                  </SwiperSlide>
-                  <SwiperSlide>
-                  <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/toshiba.png" alt=" "/>
-                  </div> 
-                  </SwiperSlide>
-                  <SwiperSlide>
-                  <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/shroff.png" alt=" "/>
-                  </div> 
-                  </SwiperSlide>
-                  <SwiperSlide>
-                  <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/modern.png" alt=" "/>
-                  </div> 
-                  </SwiperSlide>
-                  <SwiperSlide>
-                  <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/malasiye.png" alt=" "/>
-                  </div> 
-                  </SwiperSlide>
-                  <SwiperSlide>
-                  <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/ndmc.png" alt=" "/>
-                  </div> 
-                  </SwiperSlide>
-                  <SwiperSlide>
-                  <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/shimz.png" alt=" "/>
-                  </div> 
-                  </SwiperSlide>
-                  <SwiperSlide>
-                  <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/aditya.png" alt=" "/>
-                  </div> 
-                  </SwiperSlide>
-                  <SwiperSlide>
-                  <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/aditya.png" alt=" "/>
-                  </div> 
-                  </SwiperSlide>
-                  <SwiperSlide>
-                  <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/aditya.png" alt=" "/>
-                  </div> 
-                  </SwiperSlide>
-                  <SwiperSlide>
-                  <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/aditya.png" alt=" "/>
-                  </div> 
-                  </SwiperSlide>
-                  <SwiperSlide>
-                  <div className="client-logo">
-                  <img src="https://signageindia.in/wp-content/uploads/2020/03/aditya.png" alt=" "/>
-                  </div> 
-                  </SwiperSlide>
+                 
               </Swiper>
                 </div>
               </Row>

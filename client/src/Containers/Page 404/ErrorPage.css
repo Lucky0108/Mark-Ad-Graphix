@@ -1,0 +1,25 @@
+.error-page-section {
+    text-align: center;
+    color: #233d62;
+    padding-top: 50px;
+}
+
+.error-page-section img {
+    width: 60%;
+}
+
+.error-message {
+    margin-top: 40px;
+}
+
+.error-message h3 {
+    font-size: 1.6rem;
+    margin: 0 0 0.8em;
+}
+
+.error-message p {
+    font-size: 1.2rem;
+    margin-bottom: 1.8em;
+    color: #687693;
+    line-height: 1.9em;
+}

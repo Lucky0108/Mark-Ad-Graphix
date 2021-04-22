@@ -20,6 +20,7 @@ import Footer from './Components/Footer';
 import ProductPage from './Components/UI/ProductPage';
 import WhatsAppIcon from './Components/WhatsappIcon';
 import BackTop from './Components/BackTop';
+import Page404 from './Containers/Page 404';
 
 function App() {
 
@@ -43,6 +44,7 @@ function App() {
         <Route exact path="/contact" component={Contact} />
         {/* <ProductPage /> */}
         <Route exact path="/product/hello" component={ProductPage} />
+        <Route component={Page404} />
       </Switch>
       <Footer />
       <BackTop />

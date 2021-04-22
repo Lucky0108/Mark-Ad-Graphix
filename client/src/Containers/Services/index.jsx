@@ -66,14 +66,14 @@ const Services = (props) => {
           <Col lg={6} md={6} sm={12} className="mb-4"  style={{ overflow: "hidden"}}>
             <h3>Multiple Printing Machines</h3>
             <a href="#" target="_self" className="service-img-div">
-            <img src={service3} alt=" " />
+            <img src={service3} alt="Multiple Printing Machines" />
             </a>
             <div className="service-content">
             Multiple printing machines  gives us the flexibility to offer the most cost effective and efficient printing solution to meet all your needs.
             <ul>
               <li> - To Provide All The Requirements in a way which is more time effective.</li>
               <li> - To Offer A Cost Effective Solution Of Your need.</li>
-              <li> - We are here to provide everyt solution in the most effective way.</li>
+              <li> - We are here to provide every solution in the most effective way.</li>
             </ul>
             </div>
           </Col>

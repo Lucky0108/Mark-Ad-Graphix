@@ -1,0 +1,35 @@
+
+.testimonial-div {
+    padding: 50px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    transition: all .3s;
+    flex-direction: column;
+    position: relative;
+}
+
+.testimonial-div img {
+    border-radius: 50%;
+    margin: auto auto 30px;
+}
+
+.testimonial-div p {
+    width: 90%;
+    color: #C7C6C7;
+    font-size: 1.3rem;
+}
+
+.testimonial-div .info h5 {
+    font-size: 1.3rem;
+    margin: 2em 0 .3em;
+    color: #fff;
+    font-weight: 500 !important;
+}
+
+.testimonial-div .info p {
+    font-size: 1.1rem;
+    color: #49B9ED;
+    width: 100%;
+}

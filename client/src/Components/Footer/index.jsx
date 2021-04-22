@@ -86,7 +86,7 @@ const Footer = (props) => {
           </div>
         </div>
         <div className="footer-copyright-wrap clearfix">
-            {/* Copyright © 2021 | Mark Ad Grapfix. All Rights Reserved.  */}
+            Copyright © 2021 | Mark Ad Grapfix. All Rights Reserved. 
             Designed By <a href="https://lakshayyadav.me" target="_blank" rel="noopener noreferrer">LAKSHAY</a>
         </div>
       </section>      

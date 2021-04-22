@@ -24,7 +24,7 @@ const About = (props) => {
       <div className="about-section-div">
       <Row>
       <Col lg={6} sm={12} md={6}>
-      <img src={about1} alt=" " />
+      <img src={about1} alt="About Us" />
       </Col>
       <Col lg={6} sm={12} md={6}>
       <p><strong>Mark Ad Grafix</strong>, since 1990, a high quality outdoor media printing house with the reputation of producing some of the best printed material like Banner Stand, Canopies, Acrylic slim light Display and Fabrication for Exhibitions &   Glow- sign Boards, ACP Glow-sign boards, Uni-pole Hoarding, Wooden Cabinets etc. in India.</p>
@@ -46,14 +46,14 @@ const About = (props) => {
         </ul>
       </Col>
       <Col lg={6} sm={12} md={6}>
-      <img src={about2} alt=" " />
+      <img src={about2} alt="Our Mission" />
       </Col>
       </Row>
       </div>
       <div className="about-section-div">
       <Row>
       <Col lg={6} sm={12} md={6}>
-      <img src={about3} alt=" " />
+      <img src={about3} alt="Why Us" />
       </Col>
       <Col lg={6} sm={12} md={6}>
       <h6>Why Us: </h6>

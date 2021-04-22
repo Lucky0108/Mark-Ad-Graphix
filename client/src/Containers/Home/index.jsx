@@ -6,6 +6,7 @@ import Typewriter from "typewriter-effect";
 // Media Imports
 import introVid from '../../img/intro.mp4'
 import aboutVid from '../../img/about.mp4'
+import testimonialBg from '../../img/testimonial-bg.jpg'
 import pro1 from '../../img/download.jfif'
 import pro2 from '../../img/pro2.jfif'
 import pro3 from '../../img/pro3.jfif'
@@ -15,6 +16,7 @@ import client3 from '../../img/Louis.png'
 import client4 from '../../img/van-heusen.png'
 import client5 from '../../img/planet.jpg'
 import client6 from '../../img/stanmax.png'
+import test1 from '../../img/lakshay.webp'
 
 
 // Components Import
@@ -28,6 +30,7 @@ import 'swiper/swiper-bundle.css'
 // Import Swiper core and required modules
 import SwiperCore, { Pagination,  Autoplay, EffectFade } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import TestimonialDiv from '../../Components/UI/TestimonialDiv';
 
 // Install Swiper modules
 SwiperCore.use([Pagination, Autoplay, EffectFade]);
@@ -106,7 +109,7 @@ const Home = (props) => {
       </section>
 
       {/* Services Section */}
-      <section className="home-services-section py-5 section-padding animation-1">
+      <section className="home-services-section py-5 section-padding sliding-animation">
         <Container>
           <Row>
             <HomeSectionsHeading headingClass={serviceHeading ? "active" : ""} heading="Not Your Regular Signage Company" para="The high-speed, hi-tech equipment from Japan and China provides us with a fast turnaround and consistently superior quality." />
@@ -124,7 +127,7 @@ const Home = (props) => {
       </section>
 
       {/* About Section */}
-      <section className="home-about-section animation-1">
+      <section className="home-about-section sliding-animation">
         <div className="home-about-wrap">
           <video src={aboutVid} className="aboutVideo" loop muted autoPlay />
           <div className="contentDiv">
@@ -146,7 +149,7 @@ const Home = (props) => {
       </section>
 
       {/* Products Section */}
-      <section className="home-product-section animation-1">
+      <section className="home-product-section sliding-animation">
         <div className="home-product-wrap">
           <div className="layer">
             <Container>
@@ -213,7 +216,7 @@ const Home = (props) => {
       </section>
 
       {/* Clients Section */}
-      <section className="home-client-section animation-1">
+      <section className="home-client-section sliding-animation">
         <div className="home-client-wrap">
           <div className="layer">
             <Container>
@@ -235,35 +238,34 @@ const Home = (props) => {
                 >
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src={client1} alt=" "/>
+                  <img src={client1} alt="Allen Solly"/>
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src={client2} alt=" " />
+                  <img src={client2} alt="Reliance Trends" />
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src={client3} alt=" " />
+                  <img src={client3} alt="Louis Philippe" />
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src={client4} alt=" " />
+                  <img src={client4} alt="Van Huesen" />
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src={client5} alt=" " />
+                  <img src={client5} alt="Planet Fashion" />
                   </div> 
                   </SwiperSlide>
                   <SwiperSlide>
                   <div className="client-logo">
-                  <img src={client6} alt=" " />
+                  <img src={client6} alt="Stanmax" />
                   </div> 
                   </SwiperSlide>
-                 
               </Swiper>
                 </div>
               </Row>
@@ -272,6 +274,42 @@ const Home = (props) => {
               </div>
             </Container>
           </div>
+        </div>
+      </section>
+
+      {/* Testimonial Section */}
+      <section className="testimonial-section">
+        <div className="testimonial-wrap">
+          <img className="testimonial-bg" src={testimonialBg} alt=" " />
+          <div className="contentDiv">
+              <div className="layer">
+                <Container>
+                  <Row>
+                    <HomeSectionsHeading headingClass="active" heading="Testimonials" para="This is what our clients say about us!" />
+                    <Swiper
+                      onSwiper={(swiper) => console.log(swiper)}
+                      autoplay = {{ delay: 2500, disableOnInteraction: false}}
+                    >
+                      <SwiperSlide>
+                        <TestimonialDiv img={test1} name="Lakshay Yadav" company="Allen Solly" quote='"Being a part of this team is an amazing and wonderfull experience where we all learn and earn together. All of our clients also have a wonderfull experience with us and highly recommend working with us or getting services from us."' />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <TestimonialDiv img={test1} name="Lucky" company="Allen Solly" quote='"Being a part of this team is an amazing and wonderfull experience where we all learn and earn together. All of our clients also have a wonderfull experience with us and highly recommend working with us or getting services from us."' />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <TestimonialDiv img={test1} name="Sandeep yadav" company="Allen Solly" quote='"Being a part of this team is an amazing and wonderfull experience where we all learn and earn together. All of our clients also have a wonderfull experience with us and highly recommend working with us or getting services from us."' />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <TestimonialDiv img={test1} name="Lakshay Yadav" company="Allen Solly" quote='"Being a part of this team is an amazing and wonderfull experience where we all learn and earn together. All of our clients also have a wonderfull experience with us and highly recommend working with us or getting services from us."' />
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <TestimonialDiv img={test1} name="Lakshay Yadav" company="Allen Solly" quote='"Being a part of this team is an amazing and wonderfull experience where we all learn and earn together. All of our clients also have a wonderfull experience with us and highly recommend working with us or getting services from us."' />
+                      </SwiperSlide>
+                    </Swiper>
+                  </Row>
+                </Container>
+              </div>
+          </div>  
         </div>
       </section>
     </>

@@ -71,7 +71,7 @@ const About = (props) => {
       </Container>
     </section>
     <div className="quote-div">
-        <h3><i class="fa fa-quote-left" aria-hidden="true"></i> Business that makes nothing but money is a poor business.  <i class="fa fa-quote-right" aria-hidden="true"></i></h3>
+        <h3><i className="fa fa-quote-left" aria-hidden="true"></i> Business that makes nothing but money is a poor business.  <i className="fa fa-quote-right" aria-hidden="true"></i></h3>
       </div>
     </>
    )

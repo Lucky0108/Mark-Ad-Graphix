@@ -48,7 +48,7 @@ const Home = (props) => {
   const [clientHeading, setClientHeading] = useState(false);
 
   const scrollCoord = () => {
-    console.log(window.scrollY)
+    // console.log(window.scrollY)
     if(window.scrollY >= 200 && window.scrollY <= 1150) {
       setServiceHeading(true)
     } else {
@@ -161,7 +161,6 @@ const Home = (props) => {
                   effect="fade"
                   direction="horizontal"
                   slidesPerView={1}
-                  onSwiper={(swiper) => console.log(swiper)}
                   pagination={{ clickable: true }}
                   autoplay = {{ delay: 2500, disableOnInteraction: false}}
                 >
@@ -231,7 +230,6 @@ const Home = (props) => {
                   // slidesPerGroup={5}
                   // slidesPerColumnFill="row"
                   // grabCursor={true}
-                  onSwiper={(swiper) => console.log(swiper)}
                   pagination={{ clickable: true }}
                   autoplay = {{ delay: 2500, disableOnInteraction: false}}
                   breakpoints = {{ 320: { slidesPerView: 2}, 500: { slidesPerView: 3}, 1001: { slidesPerView: 5} }}

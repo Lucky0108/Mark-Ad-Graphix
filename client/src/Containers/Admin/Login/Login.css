@@ -1,0 +1,47 @@
+.login-section {
+    background: #e9e9e9;
+}
+
+.login-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-wrap img {
+    width: 40%;
+    margin-bottom: 3rem;
+}
+
+.login-card {
+    width: 70%;
+    box-shadow: 0 4px 21.36px 2.64px rgba(25,38,62,.11);
+}
+
+.login-wrap h3 {
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: 500 !important;
+}
+
+.form-control:focus {
+    border-color: #49B9ED;
+    box-shadow: 0 0 0 1px #49b9ed;
+}
+
+.login-section + #whatsapp-widget, .login-section ~ #back-top {
+    display: none !important;
+}
+
+@media (max-width: 992px) {
+    
+    .login-wrap img {
+        width: 80%
+    }
+
+    .login-card {
+        width: 100%;
+    }
+}

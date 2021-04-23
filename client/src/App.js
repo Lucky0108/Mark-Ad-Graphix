@@ -9,18 +9,6 @@ import "slick-carousel/slick/slick-theme.css";
 import loadingImg from './img/puff.svg'
 
 // Route Components Import
-// import Service from './Containers/Services';
-// import About from './Containers/About';
-// import Product from './Containers/Products';
-// import Client from './Containers/Clients';
-// import Contact from './Containers/Contact';
-// import Footer from './Components/Footer';
-// import ProductPage from './Components/UI/ProductPage';
-// import WhatsAppIcon from './Components/WhatsappIcon';
-// import BackTop from './Components/BackTop';
-// import Page404 from './Containers/Page 404';
-// import AdminHome from './Containers/Admin/AdminHome';
-// import login from './Containers/Admin/Login';
 const Navbar = lazy(() => import('./Components/Navbar'));
 const Home = lazy(() => import('./Containers/Home'));
 const Service = lazy(() => import('./Containers/Services'));
@@ -44,7 +32,16 @@ function App() {
   useEffect(() => {
     // Go To Top Of Page When Component or Location Changes
     window.scrollTo(0,0);
+    console.log(location)
   }, [location])
+
+  const NavbarCheck = () => {
+    if(location.pathname !== '/admin' && location.pathname !== '/admin/login') return <Navbar />
+  }
+
+  const FooterCheck = () => {
+    if(location.pathname !== '/admin' && location.pathname !== '/admin/login') return <Footer />
+  }
 
   return (
     <div className="App">
@@ -52,7 +49,7 @@ function App() {
         <div className="divLoader">
             <img src={loadingImg} alt="Loading" />
         </div>}>
-        <Navbar />
+        {NavbarCheck()}
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/service" component={Service} />
@@ -65,7 +62,8 @@ function App() {
         <Route exact path="/admin/login" component={login} />
         <Route component={Page404} />
       </Switch>
-      <Footer />
+      {FooterCheck()}
+      {/* <Footer /> */}
       <WhatsAppIcon />
       <BackTop />
       </Suspense>

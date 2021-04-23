@@ -50,7 +50,7 @@ const Footer = (props) => {
                 span={  <span className="contact-phone"> <a href="tel:+919810191865" target="_blank" rel="noopener noreferrer">+91 9810191865</a> <span>, </span> <a href="tel:0120-4241246" className="ml-5px" target="_blank" rel="noopener noreferrer">0120-4241246</a> <div className="contact-whatsapp"> <a href="https://wa.me/+919810191865" target="_blank" rel="noopener noreferrer"> <i className="fa fa-whatsapp"></i> &nbsp; +91 9810191865</a> </div> </span>} 
               />   
               <FooterCol mainDiv="mail-div" icon="fa-envelope-o" contentDivName="mail-div-content" heading="Mail us:" 
-                span={  <span className="contact-mail"> <a href="/" target="_blank">markadgrafix@gmail.com</a> </span> } 
+                span={  <span className="contact-mail"> <a href="mailto:markadgrafix@gmail.com" target="_blank" rel="noopener noreferrer">markadgrafix@gmail.com</a> </span> } 
               />                   
 
             </Row>

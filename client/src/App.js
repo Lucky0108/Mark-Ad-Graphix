@@ -21,6 +21,8 @@ import ProductPage from './Components/UI/ProductPage';
 import WhatsAppIcon from './Components/WhatsappIcon';
 import BackTop from './Components/BackTop';
 import Page404 from './Containers/Page 404';
+import AdminHome from './Containers/Admin/AdminHome';
+import login from './Containers/Admin/Login';
 
 function App() {
 
@@ -42,8 +44,9 @@ function App() {
         <Route exact path="/product" component={Product} />
         <Route exact path="/client" component={Client} />
         <Route exact path="/contact" component={Contact} />
-        {/* <ProductPage /> */}
         <Route exact path="/product/hello" component={ProductPage} />
+        <Route exact path="/admin" component={AdminHome} />
+        <Route exact path="/admin/login" component={login} />
         <Route component={Page404} />
       </Switch>
       <Footer />

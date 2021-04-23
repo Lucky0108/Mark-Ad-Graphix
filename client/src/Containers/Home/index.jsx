@@ -291,19 +291,19 @@ const Home = (props) => {
                       autoplay = {{ delay: 2500, disableOnInteraction: false}}
                     >
                       <SwiperSlide>
-                        <TestimonialDiv img={test1} name="Lakshay Yadav" company="Allen Solly" quote='"Being a part of this team is an amazing and wonderfull experience where we all learn and earn together. All of our clients also have a wonderfull experience with us and highly recommend working with us or getting services from us."' />
+                        <TestimonialDiv img={test1} name="Lakshay Yadav" company="Allen Solly" quote='"Had an amazing work done by you guys! Really Appreciate all the fantastic job! Would definitely recommend everyone to you guys!"' />
                       </SwiperSlide>
                       <SwiperSlide>
-                        <TestimonialDiv img={test1} name="Lucky" company="Allen Solly" quote='"Being a part of this team is an amazing and wonderfull experience where we all learn and earn together. All of our clients also have a wonderfull experience with us and highly recommend working with us or getting services from us."' />
+                        <TestimonialDiv img={test1} name="Lucky" company="Reliance Trends" quote='"Had an amazing work done by you guys! Really Appreciate all the fantastic job! Would definitely recommend everyone to you guys!"' />
                       </SwiperSlide>
                       <SwiperSlide>
-                        <TestimonialDiv img={test1} name="Sandeep yadav" company="Allen Solly" quote='"Being a part of this team is an amazing and wonderfull experience where we all learn and earn together. All of our clients also have a wonderfull experience with us and highly recommend working with us or getting services from us."' />
+                        <TestimonialDiv img={test1} name="Sandeep yadav" company="Louis Philippe" quote='"Had an amazing work done by you guys! Really Appreciate all the fantastic job! Would definitely recommend everyone to you guys!"' />
                       </SwiperSlide>
                       <SwiperSlide>
-                        <TestimonialDiv img={test1} name="Lakshay Yadav" company="Allen Solly" quote='"Being a part of this team is an amazing and wonderfull experience where we all learn and earn together. All of our clients also have a wonderfull experience with us and highly recommend working with us or getting services from us."' />
+                        <TestimonialDiv img={test1} name="Rishabh" company="Van Huesen" quote='"Had an amazing work done by you guys! Really Appreciate all the fantastic job! Would definitely recommend everyone to you guys!"' />
                       </SwiperSlide>
                       <SwiperSlide>
-                        <TestimonialDiv img={test1} name="Lakshay Yadav" company="Allen Solly" quote='"Being a part of this team is an amazing and wonderfull experience where we all learn and earn together. All of our clients also have a wonderfull experience with us and highly recommend working with us or getting services from us."' />
+                        <TestimonialDiv img={test1} name="Rahul" company="Allen Solly" quote='"Had an amazing work done by you guys! Really Appreciate all the fantastic job! Would definitely recommend everyone to you guys!"' />
                       </SwiperSlide>
                     </Swiper>
                   </Row>

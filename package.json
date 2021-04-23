@@ -1,0 +1,25 @@
+{
+  "name": "mark-ad-graphix",
+  "version": "1.0.0",
+  "description": "A complete one-stop service for outdoor and instore Advertising.",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "client": "cd client && npm start",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lucky0108/Mark-Ad-Graphix.git"
+  },
+  "engines": {
+    "node": "12.18.3",
+    "npm": "6.14.6"
+  },
+  "author": "Lakshay Yadav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lucky0108/Mark-Ad-Graphix/issues"
+  },
+  "homepage": "https://github.com/Lucky0108/Mark-Ad-Graphix#readme"
+}

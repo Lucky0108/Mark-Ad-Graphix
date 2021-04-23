@@ -41,6 +41,19 @@ img {
     max-width: 100%;
 }
 
+.divLoader {
+    background-color: #49B9ED;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
 .text-white {
     color: #fff;
 }

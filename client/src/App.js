@@ -6,9 +6,13 @@ import { Switch, Route, useLocation } from 'react-router';
 import './App.css';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import loadingImg from './img/puff.svg'
 
 // Route Components Import
+import Profile from './Containers/Admin/Profile'
+import Newsletter from './Containers/Admin/Newsletter'
+import ContactList from './Containers/Admin/ContactList'
 const Navbar = lazy(() => import('./Components/Navbar'));
 const Home = lazy(() => import('./Containers/Home'));
 const Service = lazy(() => import('./Containers/Services'));
@@ -21,7 +25,6 @@ const ProductPage = lazy(() => import('./Components/UI/ProductPage'));
 const WhatsAppIcon = lazy(() => import('./Components/WhatsappIcon'));
 const BackTop = lazy(() => import('./Components/BackTop'));
 const Page404 = lazy(() => import('./Containers/Page 404'));
-const AdminHome = lazy(() => import('./Containers/Admin/AdminHome'));
 const login = lazy(() => import('./Containers/Admin/Login'));
 
 function App() {
@@ -36,11 +39,11 @@ function App() {
   }, [location])
 
   const NavbarCheck = () => {
-    if(location.pathname !== '/admin' && location.pathname !== '/admin/login') return <Navbar />
+    if(!location.pathname.includes('/admin')) return <Navbar />
   }
 
   const FooterCheck = () => {
-    if(location.pathname !== '/admin' && location.pathname !== '/admin/login') return <Footer />
+    if(!location.pathname.includes('/admin')) return <Footer />
   }
 
   return (
@@ -58,12 +61,13 @@ function App() {
         <Route exact path="/client" component={Client} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/product/hello" component={ProductPage} />
-        <Route exact path="/admin" component={AdminHome} />
         <Route exact path="/admin/login" component={login} />
+        <Route exact path={['/admin', '/admin/profile']} component={Profile} />
+        <Route exact path='/admin/newsletter' component={Newsletter} />
+        <Route exact path='/admin/contacts' component={ContactList} />
         <Route component={Page404} />
       </Switch>
       {FooterCheck()}
-      {/* <Footer /> */}
       <WhatsAppIcon />
       <BackTop />
       </Suspense>

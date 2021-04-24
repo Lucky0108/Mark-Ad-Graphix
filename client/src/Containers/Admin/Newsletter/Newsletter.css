@@ -1,0 +1,17 @@
+.newsletter-editor-wrap {
+    padding-top: 30px;
+}
+
+.toolbar-class, .editor-class {
+    border: 1px solid #cbcbcb;
+}
+
+.editor-class {
+    padding: 20px;
+    height: 500px;
+    overflow: auto;
+}
+
+.newsletter-btn {
+    margin-top: 2rem !important;
+}

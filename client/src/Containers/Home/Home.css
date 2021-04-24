@@ -132,22 +132,6 @@
     justify-content: center;
 }
 
-.btn-theme {
-    text-align: center;
-    font-size: 1.067rem;
-    padding: 15px 30px;
-    border-radius: 6rem;
-    color: snow;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    background: #49B9ED;
-    width: max-content;
-}
-
-.btn-theme:hover {
-    color: snow;
-}
-
 /* About Section  */
 .home-about-wrap {
     display: flex;
@@ -396,22 +380,6 @@
     margin: auto;
 }
 
-/* Responsive Css */
-
-@media (max-width:500px) {
-    .video-btn {
-        left: 42%;
-    }
-
-    .product-slider-img {
-        width: 95%;
-    }
-
-    .product-slider-content {
-        padding: 0;
-    }
-}
-
 /* Testimonial Section */
 
 .testimonial-wrap {
@@ -432,6 +400,21 @@
     object-fit: cover;
 }
 
+/* Responsive Css */
+
+@media (max-width:500px) {
+    .video-btn {
+        left: 42%;
+    }
+
+    .product-slider-img {
+        width: 95%;
+    }
+
+    .product-slider-content {
+        padding: 0;
+    }
+}
 
 @media (max-width: 768px) {
     .product-swiper {

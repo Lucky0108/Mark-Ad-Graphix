@@ -175,7 +175,7 @@ const Home = (props) => {
                       <div className="product-slider-text">
                       Acp signs are here to replace your old basic sign boards which gives a premium, elegant and classy looking signage for your brand which along with computerise cut letters &amp; LED lit logos. They provide great visibility even from great distances. They are easy to maintain and durable.								
                       </div>
-                      <Link to="/client" className="btn-theme">View All</Link>
+                      <Link to="/product" className="btn-theme">View All</Link>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
@@ -189,7 +189,7 @@ const Home = (props) => {
                       <div className="product-slider-text">
                         Neon signs are special electrical signs that are lighted by long gas tubes that contain neon or other gases. Their most common use is of neon lightning. They are a important part of signage industry and they have a very long lifetime. Neon tube signs are made by bending glass tubes into shapes.	
                       </div>
-                      <Link to="/client" className="btn-theme">View All</Link>
+                      <Link to="/product" className="btn-theme">View All</Link>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
@@ -203,7 +203,7 @@ const Home = (props) => {
                       <div className="product-slider-text">
                       A Banner Stand is an excellent choice for portable display. They come in different variety of styles such as fixed stands, Expandable stands, X-style stands and Retractable stands. Retail stores uses Banner stand for marketing and to display their new products. You may see them in store windows and throught malls.
                       </div>
-                      <Link to="/client" className="btn-theme">View All</Link>
+                      <Link to="/product" className="btn-theme">View All</Link>
                     </div>
                   </SwiperSlide>
                 </Swiper>

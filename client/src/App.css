@@ -62,8 +62,29 @@ img {
     padding: 100px 0;
 }
 
+.btn-theme {
+    text-align: center;
+    font-size: 1.067rem;
+    padding: 15px 30px;
+    border-radius: 6rem;
+    color: snow;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: #49B9ED;
+    width: max-content;
+}
+
+.btn-theme:hover {
+    color: snow;
+}
+
 @media(max-width: 992px) {
     body {
         font-size: 80%;
+    }
+
+    .btn-theme {
+        width: 100%;
+        letter-spacing: 1px;
     }
 }

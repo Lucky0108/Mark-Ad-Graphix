@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Button, Card, Col, Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import logoImg from '../../../img/logo2.png'
 import './Login.css';
 
@@ -39,6 +40,7 @@ const Login = (props) => {
                   </Form>
                 </Card.Body>
               </Card>
+              <p><Link to="/"><i className="fa fa-long-arrow-left" aria-hidden="true"></i> Get Back to Mark Ad Grafix</Link></p>
             </div>
           </Col>
         </Row>

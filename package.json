@@ -26,8 +26,15 @@
   },
   "homepage": "https://github.com/Lucky0108/Mark-Ad-Graphix#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "concurrently": "^6.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
+    "express-validator": "^6.10.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.5",
     "nodemon": "^2.0.7"
   }
 }

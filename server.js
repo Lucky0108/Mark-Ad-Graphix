@@ -1,9 +1,39 @@
 const express = require('express');
 const app = express();
+const mongoose = require('mongoose');
 const path = require('path');
+const cors = require('cors');
+const env = require('dotenv');
+
+// Environemt variable configure
+env.config();
+
+// Routes
+const authRoutes = require('./routes/auth');
+const queryRoutes = require('./routes/query');
+const newsletterRoutes = require('./routes/newsletter');
+
+// Databse Connect
+mongoose.connect(
+    `mongodb+srv://${process.env.MONGO_DB_USER}:${process.env.MONGO_DB_PASSWORD}@cluster0.qceio.mongodb.net/${process.env.MONGO_DB_DATABASE}?retryWrites=true&w=majority`,
+{
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true
+})
+    .then(() => {
+        console.log("Database Connected!!")
+    })
+    .catch((err) => {
+        console.log(`Failed to connect to Database, Error:${err}`)
+    })
 
 // Route Setups
 app.use(express.json());
+app.use(cors());
+app.use('/api',authRoutes);
+app.use('/api',queryRoutes);
+app.use('/api',newsletterRoutes);
 
 // Serve static assets if in production
 if(process.env.NODE_ENV === 'production') {

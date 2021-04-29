@@ -58,6 +58,33 @@ exports.signin = (req,res) => {
     })
 }
 
+exports.updateUser = (req,res) => {
+    const errors = validationResult(req);
+
+    if (!errors.isEmpty()) {
+      return res.status(422).json({
+        message: errors.array()[0].msg
+      });
+    }
+
+    // User.find({ email: req.body.email })
+    // .exec((err, user) => {
+    //     if(err) return res.status(400).json(err)
+    //     if(user) {
+    //         // console.log(user[0]._id)
+    //         User.findByIdAndUpdate(user[0]._id, {$set: req.body}, { new: true, useFindAndModify: false }, (err, user) => {
+    //             if(err) return res.status(400).json({ message: "Failed To Update The User!", error: err })
+    //             if(user) return res.status(200).json({ message: "User Updated Successfully!", data: user })
+    //         })
+    //     }
+    // })
+
+    User.findByIdAndUpdate(req.body._id , {$set: req.body }, {new: true, useFindAndModify: false}, (err, user) => {
+        if(err) return res.status(400).json({ message: "Failed To Update The User!", error: err })
+        if(user) return res.status(200).json({ message: "User Updated Successfully!", user: user })
+    })
+}
+
 exports.signout = (req,res) => {
     res.clearCookie("token");
     res.status(200).json({ message: "Logout Success!" })

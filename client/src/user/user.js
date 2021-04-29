@@ -7,6 +7,13 @@ export const login = user => {
     return res;
 }
 
+export const updateUser = user => {
+  const res = axios.put('/admin/update', { ...user })
+    res.then(response => { return response })
+    res.catch(err => { return err });
+  return res;
+}
+
 export const authenticate = (data, next) => {
     if(typeof window !== "undefined") {
         localStorage.setItem("jwt", JSON.stringify(data));

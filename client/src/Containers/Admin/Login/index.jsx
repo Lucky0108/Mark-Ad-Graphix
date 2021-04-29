@@ -13,7 +13,6 @@ import './Login.css';
 **/
 
 const Login = (props) => {
-  let container;
   const [values, setValues] = useState({
     email: "",
     password: "",

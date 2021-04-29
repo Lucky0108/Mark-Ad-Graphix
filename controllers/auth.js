@@ -14,7 +14,7 @@ exports.signup = (req,res) => {
 
     User.findOne({ email: req.body.email })
     .exec((err,user) => {
-        if(err) return res.status(404).json({ message: "Something went wrong!", error: err });
+        if(err) return res.status(404).json({ message: "Something went wrong! Try Again Later!", error: err });
         if(user) return res.status(400).json({ message: "User already exists!" });
 
         const _user = new User(req.body);
@@ -38,12 +38,12 @@ exports.signin = (req,res) => {
 
     User.findOne({ email: req.body.email })
     .exec((err,user) => {
-        if(err) return res.status(404).json({ message: "Something went wrong!" });
+        if(err) return res.status(404).json({ message: "Something went wrong! Try Again Later!" });
         if(user){
             if(user.authenticate(req.body.password)){
-                const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET_KEY, { expiresIn: '7d' }) 
+                const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET_KEY, { expiresIn: '1d' }) 
                 const { _id, firstName, lastName, email, phone } = user;
-                res.cookie("token",token)
+                res.cookie("token", token, { expiresIn: '1d' })
                 return res.status(200).json({ 
                     token: `Bearer ${token}`,
                     user: {
@@ -53,7 +53,7 @@ exports.signin = (req,res) => {
                 return res.status(400).json({ message: "Incorrect Password!"})
             }
         } else { 
-            return res.status(404).json({ message: "No User Found!", error: err }) 
+            return res.status(404).json({ message: "No User Found!"}) 
         }
     })
 }

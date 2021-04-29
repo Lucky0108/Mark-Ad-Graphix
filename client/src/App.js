@@ -7,12 +7,15 @@ import './App.css';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import "toastr/build/toastr.css";
+import "animate.css/animate.css";
 import loadingImg from './img/puff.svg'
 
 // Route Components Import
 import Profile from './Containers/Admin/Profile'
 import Newsletter from './Containers/Admin/Newsletter'
 import ContactList from './Containers/Admin/ContactList'
+import PrivateRoute from './user/PrivateRoutes';
 const Navbar = lazy(() => import('./Components/Navbar'));
 const Home = lazy(() => import('./Containers/Home'));
 const Service = lazy(() => import('./Containers/Services'));
@@ -21,7 +24,6 @@ const Product = lazy(() => import('./Containers/Products'));
 const Client = lazy(() => import('./Containers/Clients'));
 const Contact = lazy(() => import('./Containers/Contact'));
 const Footer = lazy(() => import('./Components/Footer'));
-const ProductPage = lazy(() => import('./Components/UI/ProductPage'));
 const WhatsAppIcon = lazy(() => import('./Components/WhatsappIcon'));
 const BackTop = lazy(() => import('./Components/BackTop'));
 const Page404 = lazy(() => import('./Containers/Page 404'));
@@ -60,11 +62,10 @@ function App() {
         <Route exact path="/product" component={Product} />
         <Route exact path="/client" component={Client} />
         <Route exact path="/contact" component={Contact} />
-        <Route exact path="/product/hello" component={ProductPage} />
-        <Route exact path="/admin/login" component={login} />
-        <Route exact path={['/admin', '/admin/profile']} component={Profile} />
-        <Route exact path='/admin/newsletter' component={Newsletter} />
-        <Route exact path='/admin/contacts' component={ContactList} />
+        <Route exact path="/admin" component={login} />
+        <PrivateRoute exact path='/admin/profile' component={Profile} />
+        <PrivateRoute exact path='/admin/newsletter' component={Newsletter} />
+        <PrivateRoute exact path='/admin/contacts' component={ContactList} />
         <Route component={Page404} />
       </Switch>
       {FooterCheck()}

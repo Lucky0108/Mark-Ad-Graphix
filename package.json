@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/Lucky0108/Mark-Ad-Graphix#readme",
   "dependencies": {
+    "axios": "^0.21.1",
     "bcrypt": "^5.0.1",
     "concurrently": "^6.0.2",
     "cors": "^2.8.5",

@@ -22,14 +22,14 @@
 }
 
 .profile-details .form-control:disabled {
-    background: #fff !important;
+    background: #efefef !important;
 }
 
 .profile-details .input-group>.form-control {
     width: 100%;
 }
 
-.profile-input:hover {
+.profile-input:disabled:hover {
     cursor: not-allowed;
 }
 

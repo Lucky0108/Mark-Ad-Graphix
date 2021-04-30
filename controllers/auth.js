@@ -81,7 +81,15 @@ exports.updateUser = (req,res) => {
 
     User.findByIdAndUpdate(req.body._id , {$set: req.body }, {new: true, useFindAndModify: false}, (err, user) => {
         if(err) return res.status(400).json({ message: "Failed To Update The User!", error: err })
-        if(user) return res.status(200).json({ message: "User Updated Successfully!", user: user })
+        if(user) { 
+            const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET_KEY, { expiresIn: '1d' }) 
+            const { _id, firstName, lastName, email, phone } = user;
+            res.cookie("token", token, { expiresIn: '1d' })
+            return res.status(200).json({ message: "User Updated Successfully!", token: `Bearer ${token}`,
+            user: {
+                _id, firstName, lastName, email, phone
+        } }) 
+        }
     })
 }
 

@@ -8,7 +8,7 @@
 }
 
 .table-hover tbody tr:hover textarea {
-    background-color: transparent;
+    background-color: transparent !important;
 }
 
 @media (max-width:768px) {

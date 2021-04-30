@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
 import './Contact.css'
 
 // Component Import
 import PageTitle from '../../Components/UI/PageTitle'
+import { ContactApi } from '../../user/user';
 
 /**
 * @author
@@ -11,6 +12,37 @@ import PageTitle from '../../Components/UI/PageTitle'
 **/
 
 const Contact = (props) => {
+
+  const [values, setValues] = useState({
+    name: '',
+    email: '',
+    subject: "",
+    phone: '',
+    country: '',
+    Interest: '',
+    message: '',
+    response: false,
+    loading: false
+  })
+
+  const { name, email, subject, phone, country, Interest, message } = values;
+
+  const handleChange = name => event => {
+    setValues({ ...values, response: false, [name]: event.target.value })
+  }
+
+  const submitForm = (e) => {
+    e.preventDefault();
+    setValues({ ...values, response: false, loading: true })
+    ContactApi({ name, email, subject, phone, country, Interest, message })
+    .then((res) => {
+      setValues({ ...values, response: res.data.message, loading: false })
+    })
+    .catch((err) => {
+      setValues({ ...values, response: err.response.data.message, loading: false })
+    })
+  }
+
   return(
     <>
       <PageTitle heading="Contact Us" />
@@ -46,37 +78,32 @@ const Contact = (props) => {
             </Col>
             <Col md={6} lg={6} sm={12}>
               <div className="contact-form-div">
-              <form action="https://dezedd.us1.list-manage.com/subscribe/post-json?u=2fdef1bcc44722e4427571aa3&amp;id=e5d5875ac6&c=?" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate contact-form" target="_blank" novalidate>
-                {/* <form className="contact-form"> */}
+              {/* <form onSubmit={submitForm}> */}
+                <form className="contact-form" onSubmit={submitForm}>
                   <Row>
                     <Col lg={6} xs={12}>
-                    <input type="text" placeholder="Your Name" name="FNAME" className="contact-form-input form-control" required></input>
+                    <input type="text" placeholder="Your Name" className="contact-form-input form-control" onChange={handleChange("name")} value={name} required />
                     </Col>
                     <Col lg={6} xs={12}>
-                    <input type="email" placeholder="Your Email" name="EMAIL" className="contact-form-input form-control" required></input>
+                    <input type="email" placeholder="Your Email" className="contact-form-input form-control" onChange={handleChange("email")} value={email} required />
                     </Col>
                     <Col lg={6} xs={12}>
-                    <input type="text" placeholder="Subject" name="SUBJECT" className="contact-form-input" required></input>
+                    <input type="text" placeholder="Subject" className="contact-form-input" onChange={handleChange("subject")} value={subject} required />
                     </Col>
                     <Col lg={6} xs={12}>
-                    <input type="text" placeholder="Phone" name="PHONE" className="contact-form-input"></input>
+                    <input type="text" placeholder="Phone" className="contact-form-input" onChange={handleChange("phone")} value={phone} />
                     </Col>
                     <Col lg={6} xs={12}>
-                    <input type="text" placeholder="Country" name="COUNTRY" className="contact-form-input"></input>
+                    <input type="text" placeholder="Country" className="contact-form-input" onChange={handleChange("country")} value={country} />
                     </Col>
                     <Col lg={6} xs={12}>
-                    <input type="text" placeholder="Your Requirement / Interest" name="INTEREST" className="contact-form-input"></input>
+                    <input type="text" placeholder="Your Requirement / Interest" className="contact-form-input" onChange={handleChange("Interest")} value={Interest} />
                     </Col>
                     <Col lg={12} xs={12}>
-                    <textarea col="40" rows="10" className="contact-form-input" name="MESSAGE" placeholder="Your Message" required></textarea>
+                    <textarea col="40" rows="10" className="contact-form-input" name="MESSAGE" placeholder="Your Message" required onChange={handleChange("message")} value={message} />
                     </Col>
                     <Col lg={12} xs={12}>
-                    <div class="response" id="mce-error-response" style={{display: "none"}}></div>
-		                <div class="response" id="mce-success-response" style={{display: "none"}}></div>
-	                  {/* </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--> */}
-                    <div style={{position: "absolute", left: "-5000px"}} aria-hidden="true"><input type="text" name="b_2fdef1bcc44722e4427571aa3_e5d5875ac6" tabindex="-1" value="" /></div>
-                    <div class="clear"><input type="submit" value="Send us a Message" name="subscribe" id="mc-embedded-subscribe" className="contact-submit-btn button" /></div>  
-                      {/* <button type="submit" className="contact-submit-btn">Send us a Message</button> */}
+                    <button className="contact-submit-btn">Send us a Message</button>
                     </Col>
                   </Row>
                   <input type="hidden" name="ht" value="4db7503e3fc2ec800836fe597ee2f83cf99cc0a3:MTYxOTA4NTYyMC4xOTIy" />

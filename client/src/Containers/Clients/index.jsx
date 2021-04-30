@@ -16,6 +16,7 @@ import client7 from '../../img/wls.jpg'
 import client8 from '../../img/johnplayers.jpg'
 import client9 from '../../img/gitanjali.png'
 import client10 from '../../img/cantabil.jpg'
+import client11 from '../../img/levis.png'
 
 /**
 * @author
@@ -56,7 +57,9 @@ const Clients = (props) => {
         alt1="Gitanjali"
         img2={client10}
         alt2="Cantabil" 
-        img3={undefined} img4={undefined}
+        img3={client11}
+        alt3="Levi's"
+        img4={undefined}
       /> 
     </div>
     </Container>

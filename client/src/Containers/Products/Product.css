@@ -53,7 +53,27 @@
     color: rgba(37, 208, 251, 0.8);
 }
 
+.products-displays {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    transition: all ease-in-out .3s;
+}
+
+.products-displays img {
+    width: 30% !important;
+    margin-right: 2%;
+    margin-bottom: 2rem;
+    flex-basis: 31%;
+}
+
 /* Responsive Css */
+
+@media(max-width: 500px) {
+    .products-displays {
+        display: none !important;
+    }
+}
 
 @media(max-width: 768px) {
     .contact-cta-div  {

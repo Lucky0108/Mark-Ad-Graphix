@@ -4,7 +4,6 @@ import AdminLeftPanel from '../../../Components/UI/AdminLeftPanel';
 import profileImg from '../../../img/lakshay.webp'
 import { Col, InputGroup, FormControl, Form, Button } from 'react-bootstrap';
 import { isAuthenticated, updateUser } from '../../../user/user';
-// import profileImg from '../../../img/default.jpg'
 
 /**
 * @author
@@ -13,7 +12,7 @@ import { isAuthenticated, updateUser } from '../../../user/user';
 
 const Profile = (props) => {
 
-  const { user } = isAuthenticated();
+  const user  = isAuthenticated();
 
   const [edit, setEdit] = useState(false);
   const [values, setValues] = useState({
@@ -42,7 +41,9 @@ const Profile = (props) => {
        // eslint-disable-next-line no-restricted-globals
       location.reload();
    })
-   .catch(err => console.log(err))
+   .catch((err) => { 
+    setValues({ ...values, error:err.response.data.message, loading: false })
+    })
   }
 
   return (

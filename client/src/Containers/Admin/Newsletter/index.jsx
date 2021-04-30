@@ -12,7 +12,7 @@ import { Editor } from "react-draft-wysiwyg";
 const Newsletter = (props) => {
   return(
     <AdminLeftPanel>
-    <div className="newsletter-editor-wrap">
+    <div className="newsletter-editor-wrap container">
     <Editor
       // editorState={editorState}
       toolbarClassName="toolbar-class"

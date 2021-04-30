@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import './Footer.css'
 
 // Component Import
 import FooterCol from '../FooterCol';
+import { NewsletterApi } from '../../user/user';
 
 /**
 * @author
@@ -28,6 +29,15 @@ const Footer = (props) => {
 
      // variable to render Icons List
      const renderIconList = SocialIconList.map((val, index) => { return  <li key={index}> <a href={val[0]} target="_blank" rel="noopener noreferrer"> <i className={`fa ${val[1]}`}></i> </a> </li>})
+
+     const [email, setEmail] = useState('');
+     const [message, setMessage] = useState('');
+     const submitMail = (e) => {
+       e.preventDefault();
+       NewsletterApi({ email })
+        .then((res) => console.log(res))
+        .catch((err) => console.log(err))
+     }
 
   return(
     <>
@@ -76,8 +86,10 @@ const Footer = (props) => {
                   <h2 className="subscribe-widget-title">Subscribe</h2>
                   <h5>Fill the form below to subscribe to our news feed now!</h5>
                   <div className="subscribe-input-div">
-                    <input type="email" className="form-control subscribe-input" placeholder="Email address" required/>
-                    <button type="submit" className="subscribe-submit-btn"></button>
+                    <form style={{ display: "contents" }} onSubmit={submitMail}>
+                    <input type="email" className="form-control subscribe-input" placeholder="Email address" onChange={(e) => setEmail(e.target.value)} value={email} required/>
+                    <button className="subscribe-submit-btn"></button>
+                    </form>
                   </div>
                 </Col>
               </Row>

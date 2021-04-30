@@ -9,7 +9,7 @@ import './ProductCard.css'
 const ProductCard = (props) => {
     return (
         <>
-            <div className="product-card">
+            <div className="product-card" onClick={props.clickFunc}>
                 <div className="product-card-image">
                         <img src={props.img} alt={props.name} />
                 </div>

@@ -10,10 +10,17 @@ exports.setNewsletter = (req,res) => {
         });
     }
 
-    const _newsletter = new Newsletter(req.body);
-    _newsletter.save((err,data) => {
-        if(err) return res.status(400).json({ message: "Something went wrong! Please Try again later!", error: err });
-        if(data) return res.status(201).json({ message: "Subscribed Successfully! You'll soon start receiving updates!", data: data})
+    Newsletter.findOne({ email: req.body.email })
+    .exec((err, email) => {
+        if(err) return res.status(404).json({ message: "Error Occured While Looking In Database!" })
+        if(email) return res.status(400).json({ message: "You Are Already Subscribed!" })
+    
+        const _newsletter = new Newsletter(req.body);
+        _newsletter.save((err,data) => {
+            if(err) return res.status(400).json({ message: "Something went wrong! Please Try again later!", error: err });
+            if(data) return res.status(201).json({ message: "Subscribed Successfully! You'll soon start receiving updates!", data: data})
+        })
+    
     })
 }
 

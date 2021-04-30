@@ -12,33 +12,40 @@ import './ContactList.css'
 const ContactList = (props) => {
 
   const [queryList, setQueryList] = useState([]);
+  const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState(false);
 
   useEffect(() => {
+    setLoading(true)
     contactList()
       .then((res) => { 
+        setLoading(false)
         setQueryList(res.data.queries);
       })
       .catch((err) => { 
+        setLoading(false)
         setErrorMessage(err.response.data.message);
       })
-  })
+  },[])
 
   const renderQueryList = () => {
-    return queryList.map((query, index) => {
-      return (
-      <tr key={index}>
-        <td>{index + 1}</td>
-        <td>{query.name} </td>
-        <td><a href={`mailto:${query.email}`} target="_blank" rel="noopener noreferrer" >{query.email}</a> </td>
-        <td>{query.subject ? query.subject : '-'} </td>
-        <td>{query.phone ? <a href={`tel:${query.phone}`}>{query.phone}</a> : '-'} </td>
-        <td>{query.country ? query.country : '-'} </td>
-        <td>{query.Interest ? query.Interest : '-'} </td>
-        <td><textarea rows="3" id="address" style={{minWidth: "100%", resize:"none", backgroundColor: "#fff"}} value={query.message} disabled /> </td>
-      </tr>
-      )
-    })
+    return loading ? <p>Loading...</p> : (
+      queryList.map((query, index) => {
+        return (
+        <tr key={index}>
+          <td>{index + 1}</td>
+          <td>{query.name} </td>
+          <td><a href={`mailto:${query.email}`} target="_blank" rel="noopener noreferrer" >{query.email}</a> </td>
+          <td>{query.subject ? query.subject : '-'} </td>
+          <td>{query.phone ? <a href={`tel:${query.phone}`}>{query.phone}</a> : '-'} </td>
+          <td>{query.country ? query.country : '-'} </td>
+          <td>{query.Interest ? query.Interest : '-'} </td>
+          <td><textarea rows="3" id="address" style={{minWidth: "100%", resize:"none", backgroundColor: "#fff"}} value={query.message} disabled /> </td>
+        </tr>
+        )
+      })
+    )
+   
   }
 
   return(

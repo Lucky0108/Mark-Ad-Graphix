@@ -12,7 +12,7 @@ import { isAuthenticated, updateUser } from '../../../user/user';
 
 const Profile = (props) => {
 
-  const user  = isAuthenticated();
+  const { user }  = isAuthenticated();
 
   const [edit, setEdit] = useState(false);
   const [values, setValues] = useState({

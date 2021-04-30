@@ -35,8 +35,8 @@ const Footer = (props) => {
      const submitMail = (e) => {
        e.preventDefault();
        NewsletterApi({ email })
-        .then((res) => console.log(res))
-        .catch((err) => console.log(err))
+        .then((res) => setMessage(res.data.message))
+        .catch((err) => setMessage(err.response.data.message))
      }
 
   return(

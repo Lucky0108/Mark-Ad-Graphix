@@ -35,7 +35,8 @@ const Login = (props) => {
         authenticate(user.data, () => setValues({ ...values, loading: false }))
       }) 
       .catch((err) => { 
-        setValues({ ...values, error:err.response.data.message, loading: false })
+        // console.log(err.response.data.message)
+        setValues({ ...values, error: err.response.data.message, loading: false })
       })
   }
 

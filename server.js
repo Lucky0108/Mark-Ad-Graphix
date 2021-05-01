@@ -31,7 +31,7 @@ mongoose.connect(
 
 // Route Setups
 app.use(express.json());
-app.use(cors({credentials: true, origin: 'http://localhost:3000'}));
+app.use(cors({credentials: true, origin: 'https://mark-ad-grafix.herokuapp.com'}));
 app.use(cookieParser());
 app.use('/api',authRoutes);
 app.use('/api',queryRoutes);

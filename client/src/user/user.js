@@ -71,7 +71,7 @@ export const isAuthenticated = () => {
       return false;
     }
   } else {
-    // localStorage.clear();
+    localStorage.clear();
     return false;
   }
 }

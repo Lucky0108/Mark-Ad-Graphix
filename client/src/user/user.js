@@ -51,6 +51,7 @@ export const getCookie = (cName) => {
 
 export const authenticate = (data, next) => {
     if(typeof window !== "undefined") {
+      console.log(data)
         localStorage.setItem("jwt", JSON.stringify(data));
         localStorage.setItem("token", JSON.stringify(data.token));
         next();
@@ -65,11 +66,11 @@ export const isAuthenticated = () => {
   }
 
   if(cookieToken) {
-    if (localStorage.getItem("jwt")) {
+    // if (localStorage.getItem("jwt")) {
       return JSON.parse(localStorage.getItem("jwt"));
-    } else {
-      return false;
-    }
+    // } else {
+      // return false;
+    // }
   } else {
     localStorage.clear();
     return false;

@@ -43,7 +43,7 @@ exports.signin = (req,res) => {
             if(user.authenticate(req.body.password)){
                 const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET_KEY, { expiresIn: '1d' }) 
                 const { _id, firstName, lastName, email, phone } = user;
-                res.cookie("token", token, { expires: new Date(Date.now() + 5 * 60000) }) // Cookie expires after 5 minute
+                res.cookie("token", token, { expires: new Date(Date.now() + 24 * 3600000) }) // Cookie expires after 24 hours 
                 return res.status(200).json({ 
                     token: `Bearer ${token}`,
                     user: {
@@ -66,18 +66,6 @@ exports.updateUser = (req,res) => {
         message: errors.array()[0].msg
       });
     }
-
-    // User.find({ email: req.body.email })
-    // .exec((err, user) => {
-    //     if(err) return res.status(400).json(err)
-    //     if(user) {
-    //         // console.log(user[0]._id)
-    //         User.findByIdAndUpdate(user[0]._id, {$set: req.body}, { new: true, useFindAndModify: false }, (err, user) => {
-    //             if(err) return res.status(400).json({ message: "Failed To Update The User!", error: err })
-    //             if(user) return res.status(200).json({ message: "User Updated Successfully!", data: user })
-    //         })
-    //     }
-    // })
 
     User.findByIdAndUpdate(req.body._id , {$set: req.body }, {new: true, useFindAndModify: false}, (err, user) => {
         if(err) return res.status(400).json({ message: "Failed To Update The User!", error: err })

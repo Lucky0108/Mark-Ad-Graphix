@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { toast } from 'react-toastify';
+import { Col, InputGroup, FormControl, Form, Button } from 'react-bootstrap';
+import { isAuthenticated, updateUser } from '../../../user/user';
 import './Profile.css';
 import AdminLeftPanel from '../../../Components/UI/AdminLeftPanel';
 import profileImg from '../../../img/lakshay.webp'
-import { Col, InputGroup, FormControl, Form, Button } from 'react-bootstrap';
-import { isAuthenticated, updateUser } from '../../../user/user';
 
 /**
 * @author
@@ -14,18 +15,19 @@ const Profile = (props) => {
 
   const { user }  = isAuthenticated();
 
+  const toastId = React.useRef(null);
   const [edit, setEdit] = useState(false);
   const [values, setValues] = useState({
     firstName: user.firstName,
     lastName: user.lastName,
     phone: user.phone,
     _id: user._id,
-    password: '',
-    error: "",
-    loading: false
+    error: false,
+    loading: false,
+    response: false
   });
 
-  const { firstName, lastName, phone, _id, password } = values;
+  const { firstName, lastName, phone, _id, error, loading, response } = values;
 
   const handleChange = name => event => {
     setValues({ ...values, error: false, [name]: event.target.value })
@@ -34,18 +36,33 @@ const Profile = (props) => {
   const editForm = (e) => {
     e.preventDefault();
    setValues({ ...values, error: false, loading: true })
-   updateUser({ firstName, lastName, phone, _id, password })
+   updateUser({ firstName, lastName, phone, _id })
    .then((data) => { 
+      setEdit(false)
+      setValues({ ...values, response: data.data.message, loading: false })
       localStorage.removeItem("jwt");
       localStorage.setItem("jwt", JSON.stringify(data.data));
-      setEdit(false)
    })
    .catch((err) => { 
-    setValues({ ...values, error:err.response.data.message, loading: false })
-    // eslint-disable-next-line no-restricted-globals
-      location.reload();
+    setValues({ firstName: user.firstName, lastName: user.lastName, phone: user.phone, _id: user._id, error:err.response.data.message, loading: false })
+    setEdit(false)
     })
   }
+
+  useEffect(() => {
+    if(loading) {
+      toastId.current = toast.info("Loading...", {autoClose: false})
+    }
+    if(response) {
+      toast.dismiss(toastId.current);
+      toast.success(response);
+      setValues({ ...values, response: false })
+     } else if(error) {
+      toast.dismiss(toastId.current);
+      toast.error(error);
+      setValues({ ...values, error: false })
+     }
+  }, [loading, response, error, values])
 
   return (
     <AdminLeftPanel>
@@ -87,7 +104,7 @@ const Profile = (props) => {
         </div>
         <Button variant="outline-primary" className="edit-profile-btn" onClick={() => setEdit(true)} style={edit ? {display: "none"}: {display: "block"}}> Edit Profile </Button>
         <Button variant="outline-success" className="edit-profile-btn" onClick={editForm} style={edit ? {display: "inline"}: {display: "none"}}> Save Changes </Button>
-        <Button variant="outline-warning" className="edit-profile-btn" onClick={() => { setEdit(false); setValues({ firstName: user.firstName, lastName: user.lastName, phone: user.phone, _id: user._id, password: '', })}} 
+        <Button variant="outline-warning" className="edit-profile-btn" onClick={() => { setEdit(false); setValues({ firstName: user.firstName, lastName: user.lastName, phone: user.phone, _id: user._id })}} 
                 style={edit ? {display: "inline"}: {display: "none"}}> Cancel Changes </Button>
       </div>
     </AdminLeftPanel>

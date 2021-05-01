@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { toast } from 'react-toastify';
 import { Table } from 'react-bootstrap'
 import AdminLeftPanel from '../../../Components/UI/AdminLeftPanel'
 import { contactList } from '../../../user/user'
@@ -11,6 +12,7 @@ import './ContactList.css'
 
 const ContactList = (props) => {
 
+  const toastId = React.useRef(null);
   const [queryList, setQueryList] = useState([]);
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState(false);
@@ -24,12 +26,15 @@ const ContactList = (props) => {
       })
       .catch((err) => { 
         setLoading(false)
-        setErrorMessage(err.response.data.message);
+        toast.error(err.response.data.message)
+        setErrorMessage(false)
       })
   }, [])
 
   const renderQueryList = () => {
-    return loading ? <p>Loading...</p> : (
+    return loading ? toastId.current = toast.info("Loading...", {autoClose: false}) : (
+      toast.dismiss(toastId.current),
+      toast.success("Queries Succfully Loaded!", {autoClose: 2000}),
       queryList.map((query, index) => {
         return (
         <tr key={index}>

@@ -3,8 +3,7 @@ import { Container, Row, Button, Card, Col, Form } from 'react-bootstrap';
 import { Link, Redirect } from 'react-router-dom';
 import logoImg from '../../../img/logo2.png'
 import { authenticate, isAuthenticated, login } from '../../../user/user';
-import { ToastMessage } from "react-toastr";
-import 'toastr/build/toastr.css'
+import { toast } from 'react-toastify';
 import './Login.css';
 
 /**
@@ -16,11 +15,12 @@ const Login = (props) => {
   const [values, setValues] = useState({
     email: "",
     password: "",
-    error: "",
+    error: false,
     loading: false,
+    response: false,
   })
 
-  const { email, password, error, loading } = values;
+  const { email, password, error, loading, response } = values;
 
   const handleChange = name => event => {
     setValues({ ...values, error: false, [name]: event.target.value })
@@ -28,14 +28,12 @@ const Login = (props) => {
   
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(values);
-    setValues({ ...values, error: false, loading: true })
+    setValues({ ...values ,error: false, loading: true })
     login({ email, password })
       .then((user) => {
-        authenticate(user.data, () => setValues({ ...values, loading: false }))
+        authenticate(user.data, () => setValues({ email: "", password: "", response: true, loading: false }))
       }) 
-      .catch((err) => { 
-        // console.log(err.response.data.message)
+      .catch((err) => {
         setValues({ ...values, error: err.response.data.message, loading: false })
       })
   }
@@ -49,11 +47,17 @@ const Login = (props) => {
   }
 
   useEffect(() => {
-    if(error) {
-      <ToastMessage className="toast" closeButton={true} title="Success" message="Testing" iconClassName="toast-error" />
-      console.log("Toastr")
+    if(loading) {
+      toast.info("Loading...")
     }
-  },[error])
+    if(response) {
+      toast.success("Logged In Succesfully!")
+      setValues({ ...values, response: false})
+    } else if(error) {
+      toast.error(error)
+      setValues({ ...values, error: false})
+    }
+  },[error, loading, response, values])
 
   return (
     <>

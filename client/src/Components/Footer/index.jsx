@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import { toast } from 'react-toastify';
 import './Footer.css'
 
 // Component Import
@@ -31,13 +32,37 @@ const Footer = (props) => {
      const renderIconList = SocialIconList.map((val, index) => { return  <li key={index}> <a href={val[0]} target="_blank" rel="noopener noreferrer"> <i className={`fa ${val[1]}`}></i> </a> </li>})
 
      const [email, setEmail] = useState('');
-     const [message, setMessage] = useState('');
+     const [error, setError] = useState(false);
+     const [message, setMessage] = useState(false);
+     const [loading, setLoading] = useState(false);
      const submitMail = (e) => {
        e.preventDefault();
+       setLoading(true)
+       setEmail('');
        NewsletterApi({ email })
-        .then((res) => setMessage(res.data.message))
-        .catch((err) => setMessage(err.response.data.message))
+        .then((res) => {
+          setLoading(false) 
+          setMessage(res.data.message)
+        })
+        .catch((err) => { 
+          setLoading(false)
+          setError(err.response.data.message)
+        })
      }
+
+     useEffect(() => {
+       if(loading) {
+        toast.info("Loading...")
+       }
+       
+       if(message) {
+        toast.success(message);
+        setMessage(false)
+       } else if(error) {
+        toast.error(error);
+        setError(false)
+       }
+     }, [loading, message, error])
 
   return(
     <>

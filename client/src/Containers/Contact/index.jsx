@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
+import { toast } from 'react-toastify';
 import './Contact.css'
 
 // Component Import
@@ -13,7 +14,7 @@ import { ContactApi } from '../../user/user';
 
 const Contact = (props) => {
 
-  const [values, setValues] = useState({
+  const initialValues = {
     name: '',
     email: '',
     subject: "",
@@ -22,26 +23,47 @@ const Contact = (props) => {
     Interest: '',
     message: '',
     response: false,
+    error: false,
     loading: false
-  })
+  }
 
-  const { name, email, subject, phone, country, Interest, message } = values;
+  const [{ name, email, subject, phone, country, Interest, message, response, error, loading }, setValues] = useState(initialValues)
+
+  // const { name, email, subject, phone, country, Interest, message, response, error, loading } = values;
+
+  const clearValues = () => {
+    setValues({ ...initialValues });
+  };
 
   const handleChange = name => event => {
-    setValues({ ...values, response: false, [name]: event.target.value })
+    setValues(preValues => ({ ...preValues, response: false, [name]: event.target.value }) )
   }
 
   const submitForm = (e) => {
     e.preventDefault();
-    setValues({ ...values, response: false, loading: true })
+    setValues(preValues => ({ ...preValues, response: false, loading: true }) )
     ContactApi({ name, email, subject, phone, country, Interest, message })
     .then((res) => {
-      setValues({ ...values, response: res.data.message, loading: false })
+      clearValues()
+      setValues(preValues => ({ ...preValues, response: res.data.message, loading: false }) )
     })
     .catch((err) => {
-      setValues({ ...values, response: err.response.data.message, loading: false })
+      setValues(preValues => ({ ...preValues, error: err.response.data.message, loading: false }) )
     })
   }
+
+  useEffect(() => {
+    if(loading) {
+      toast.info("Loading...")
+    }
+    if(response) {
+      toast.success(response);
+      setValues(preValues => ({ ...preValues, response: false}) )
+     } else if(error) {
+      toast.error(error);
+      setValues(preValues => ({ ...preValues, error: false}) )
+     }
+  }, [loading, response, error])
 
   return(
     <>
@@ -78,7 +100,6 @@ const Contact = (props) => {
             </Col>
             <Col md={6} lg={6} sm={12}>
               <div className="contact-form-div">
-              {/* <form onSubmit={submitForm}> */}
                 <form className="contact-form" onSubmit={submitForm}>
                   <Row>
                     <Col lg={6} xs={12}>

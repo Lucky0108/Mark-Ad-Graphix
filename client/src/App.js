@@ -1,14 +1,16 @@
 // Basic Imports
 import { useEffect, lazy, Suspense } from 'react';
 import { Switch, Route, useLocation } from 'react-router';
+import { ToastContainer } from 'react-toastify';
 
 // Css Imports
 import './App.css';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
-import "toastr/build/toastr.css";
-import "animate.css/animate.css";
+import 'react-toastify/dist/ReactToastify.css';
+// import "toastr/build/toastr.css";
+// import "animate.css/animate.css";
 import loadingImg from './img/puff.svg'
 
 // Route Components Import
@@ -72,6 +74,16 @@ function App() {
       <WhatsAppIcon />
       <BackTop />
       </Suspense>
+      <ToastContainer
+          position="top-right"
+          autoClose={6000}
+          hideProgressBar={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+      />
     </div>
   );
 }

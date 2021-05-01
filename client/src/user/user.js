@@ -17,7 +17,7 @@ export const ContactApi = contact => {
 
 // Admin Api
 export const login = user => {
-    const res = axios.post('/admin/signin', { ...user },{withCredentials: true})
+    const res = axios.post('/admin/signin', { ...user })
       res.then(response => { return response })
       res.catch(err => { return err });
     return res;
@@ -51,7 +51,6 @@ export const getCookie = (cName) => {
 
 export const authenticate = (data, next) => {
     if(typeof window !== "undefined") {
-      console.log(data)
         localStorage.setItem("jwt", JSON.stringify(data));
         localStorage.setItem("token", JSON.stringify(data.token));
         next();
@@ -66,13 +65,13 @@ export const isAuthenticated = () => {
   }
 
   if(cookieToken) {
-    // if (localStorage.getItem("jwt")) {
+    if (localStorage.getItem("jwt")) {
       return JSON.parse(localStorage.getItem("jwt"));
-    // } else {
-      // return false;
-    // }
+    } else {
+      return false;
+    }
   } else {
-    localStorage.clear();
+    // localStorage.clear();
     return false;
   }
 }

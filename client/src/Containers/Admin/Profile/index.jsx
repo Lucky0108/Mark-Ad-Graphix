@@ -38,11 +38,12 @@ const Profile = (props) => {
    .then((data) => { 
       localStorage.removeItem("jwt");
       localStorage.setItem("jwt", JSON.stringify(data.data));
-       // eslint-disable-next-line no-restricted-globals
-      // location.reload();
+      setEdit(false)
    })
    .catch((err) => { 
     setValues({ ...values, error:err.response.data.message, loading: false })
+    // eslint-disable-next-line no-restricted-globals
+      location.reload();
     })
   }
 
@@ -77,12 +78,12 @@ const Profile = (props) => {
               <FormControl type="text" placeholder="Phone Number" value={phone} onChange={handleChange("phone")} className="profile-input" disabled={edit ? false: true} />
             </InputGroup>
           </Col>
-          <Col lg={10} md={10} sm={12} style={edit ? {display: "block"}: {display: "none"}}>
+          {/* <Col lg={10} md={10} sm={12} style={edit ? {display: "block"}: {display: "none"}}>
             <InputGroup className="mb-3">
             <Form.Label>Change Password</Form.Label>
               <FormControl type="password" placeholder="Change Password" value={true ? values.password: false} onChange={(e) => setValues({ ...values, password: e.target.value}) } className="profile-input"  disabled={edit ? false: true} />
             </InputGroup>
-          </Col>
+          </Col> */}
         </div>
         <Button variant="outline-primary" className="edit-profile-btn" onClick={() => setEdit(true)} style={edit ? {display: "none"}: {display: "block"}}> Edit Profile </Button>
         <Button variant="outline-success" className="edit-profile-btn" onClick={editForm} style={edit ? {display: "inline"}: {display: "none"}}> Save Changes </Button>

@@ -59,7 +59,6 @@ export const authenticate = (data, next) => {
 
 export const isAuthenticated = () => {
   const cookieToken = getCookie("token")
-    console.log(cookieToken)
   if (typeof window == "undefined") {
       return false;
   }

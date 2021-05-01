@@ -59,19 +59,19 @@ export const authenticate = (data, next) => {
 
 export const isAuthenticated = () => {
   const cookieToken = getCookie(" token")
-    
+    console.log(cookieToken)
   if (typeof window == "undefined") {
       return false;
   }
 
-  if(cookieToken) {
+  // if(cookieToken) {
     if (localStorage.getItem("jwt")) {
       return JSON.parse(localStorage.getItem("jwt"));
     } else {
       return false;
     }
-  } else {
+  // } else {
     // localStorage.clear();
-    return false;
-  }
+    // return false;
+  // }
 }

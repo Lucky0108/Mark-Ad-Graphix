@@ -12,6 +12,9 @@ import './Login.css';
 **/
 
 const Login = (props) => {
+
+  const toastId = React.useRef(null);
+
   const [values, setValues] = useState({
     email: "",
     password: "",
@@ -48,12 +51,14 @@ const Login = (props) => {
 
   useEffect(() => {
     if(loading) {
-      toast.info("Loading...")
+      toastId.current = toast.info("Loading...", {autoClose: false})
     }
     if(response) {
+      toast.dismiss(toastId.current);
       toast.success("Logged In Succesfully!")
       setValues({ ...values, response: false})
     } else if(error) {
+      toast.dismiss(toastId.current);
       toast.error(error)
       setValues({ ...values, error: false})
     }

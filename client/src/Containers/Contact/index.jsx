@@ -29,7 +29,7 @@ const Contact = (props) => {
 
   const [{ name, email, subject, phone, country, Interest, message, response, error, loading }, setValues] = useState(initialValues)
 
-  // const { name, email, subject, phone, country, Interest, message, response, error, loading } = values;
+  const toastId = React.useRef(null);
 
   const clearValues = () => {
     setValues({ ...initialValues });
@@ -54,12 +54,14 @@ const Contact = (props) => {
 
   useEffect(() => {
     if(loading) {
-      toast.info("Loading...")
+      toastId.current = toast.info("Loading...", {autoClose: false})
     }
     if(response) {
+      toast.dismiss(toastId.current);
       toast.success(response);
       setValues(preValues => ({ ...preValues, response: false}) )
      } else if(error) {
+      toast.dismiss(toastId.current);
       toast.error(error);
       setValues(preValues => ({ ...preValues, error: false}) )
      }

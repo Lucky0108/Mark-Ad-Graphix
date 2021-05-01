@@ -31,6 +31,7 @@ const Footer = (props) => {
      // variable to render Icons List
      const renderIconList = SocialIconList.map((val, index) => { return  <li key={index}> <a href={val[0]} target="_blank" rel="noopener noreferrer"> <i className={`fa ${val[1]}`}></i> </a> </li>})
 
+     const toastId = React.useRef(null);
      const [email, setEmail] = useState('');
      const [error, setError] = useState(false);
      const [message, setMessage] = useState(false);
@@ -52,13 +53,14 @@ const Footer = (props) => {
 
      useEffect(() => {
        if(loading) {
-        toast.info("Loading...")
+        toastId.current = toast.info("Loading...", {autoClose: false})
        }
-       
        if(message) {
+        toast.dismiss(toastId.current);
         toast.success(message);
         setMessage(false)
        } else if(error) {
+        toast.dismiss(toastId.current);
         toast.error(error);
         setError(false)
        }

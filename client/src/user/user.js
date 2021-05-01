@@ -17,7 +17,7 @@ export const ContactApi = contact => {
 
 // Admin Api
 export const login = user => {
-    const res = axios.post('/admin/signin', { ...user })
+    const res = axios.post('/admin/signin', { ...user },{withCredentials: true})
       res.then(response => { return response })
       res.catch(err => { return err });
     return res;
@@ -38,6 +38,17 @@ export const contactList = () => {
 }
 
 // Authenticate 
+
+export const getCookie = (cName) => {
+  let splitCookie = document.cookie.split(";");
+  for(let i=0; i < splitCookie.length; i++) {
+    let cookie = splitCookie[i].split("=");
+    if(cookie.includes(cName)) {
+      return cookie
+    }
+  }
+}
+
 export const authenticate = (data, next) => {
     if(typeof window !== "undefined") {
         localStorage.setItem("jwt", JSON.stringify(data));
@@ -47,14 +58,20 @@ export const authenticate = (data, next) => {
 };
 
 export const isAuthenticated = () => {
-    if (typeof window == "undefined") {
-        return false;
-      }
-      if (localStorage.getItem("token")) {
-        if (localStorage.getItem("jwt")) {
-          return JSON.parse(localStorage.getItem("jwt"));
-        } else {
-          return false;
-        }
-      }
+  const cookieToken = getCookie(" token")
+    
+  if (typeof window == "undefined") {
+      return false;
+  }
+
+  if(cookieToken) {
+    if (localStorage.getItem("jwt")) {
+      return JSON.parse(localStorage.getItem("jwt"));
+    } else {
+      return false;
+    }
+  } else {
+    localStorage.clear();
+    return false;
+  }
 }

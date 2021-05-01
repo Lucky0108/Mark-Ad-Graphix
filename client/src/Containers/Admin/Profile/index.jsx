@@ -39,7 +39,7 @@ const Profile = (props) => {
       localStorage.removeItem("jwt");
       localStorage.setItem("jwt", JSON.stringify(data.data));
        // eslint-disable-next-line no-restricted-globals
-      location.reload();
+      // location.reload();
    })
    .catch((err) => { 
     setValues({ ...values, error:err.response.data.message, loading: false })

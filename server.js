@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const path = require('path');
 const cors = require('cors');
 const env = require('dotenv');
+const cookieParser = require('cookie-parser');
 
 // Environemt variable configure
 env.config();
@@ -30,7 +31,8 @@ mongoose.connect(
 
 // Route Setups
 app.use(express.json());
-app.use(cors());
+app.use(cors({credentials: true, origin: 'http://localhost:3000'}));
+app.use(cookieParser());
 app.use('/api',authRoutes);
 app.use('/api',queryRoutes);
 app.use('/api',newsletterRoutes);

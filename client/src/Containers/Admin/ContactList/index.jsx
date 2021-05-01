@@ -26,7 +26,7 @@ const ContactList = (props) => {
         setLoading(false)
         setErrorMessage(err.response.data.message);
       })
-  },[])
+  }, [])
 
   const renderQueryList = () => {
     return loading ? <p>Loading...</p> : (

@@ -12,10 +12,10 @@ import "animate.css/animate.css";
 import loadingImg from './img/puff.svg'
 
 // Route Components Import
-import Profile from './Containers/Admin/Profile'
-import Newsletter from './Containers/Admin/Newsletter'
-import ContactList from './Containers/Admin/ContactList'
-import PrivateRoute from './user/PrivateRoutes';
+// import Profile from './Containers/Admin/Profile'
+// import Newsletter from './Containers/Admin/Newsletter'
+// import ContactList from './Containers/Admin/ContactList'
+// import PrivateRoute from './user/PrivateRoutes';
 const Navbar = lazy(() => import('./Components/Navbar'));
 const Home = lazy(() => import('./Containers/Home'));
 const Service = lazy(() => import('./Containers/Services'));
@@ -28,6 +28,10 @@ const WhatsAppIcon = lazy(() => import('./Components/WhatsappIcon'));
 const BackTop = lazy(() => import('./Components/BackTop'));
 const Page404 = lazy(() => import('./Containers/Page 404'));
 const login = lazy(() => import('./Containers/Admin/Login'));
+const Profile = lazy(() => import('./Containers/Admin/Profile'));
+const Newsletter = lazy(() => import('./Containers/Admin/Newsletter'));
+const ContactList = lazy(() => import('./Containers/Admin/ContactList'));
+const PrivateRoute = lazy(() => import('./user/PrivateRoutes'));
 
 function App() {
 
@@ -37,7 +41,7 @@ function App() {
   useEffect(() => {
     // Go To Top Of Page When Component or Location Changes
     window.scrollTo(0,0);
-    console.log(location)
+    // console.log(location)
   }, [location])
 
   const NavbarCheck = () => {

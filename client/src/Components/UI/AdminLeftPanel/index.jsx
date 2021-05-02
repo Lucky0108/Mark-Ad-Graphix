@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink, Redirect } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Col, Row } from 'react-bootstrap'
 import { logout } from '../../../user/user';
 import './AdminLeftPanel.css'
@@ -26,10 +26,7 @@ const AdminLeftPanel = (props) => {
                     <li><NavLink exact to="/admin/newsletter" className="admin-panel-link nav-link" activeClassName="admin-panel-active"></NavLink> Newsletter </li>
                     </div>
                     <div className="logout-div">
-                    <li onClick={() => { 
-                        logout(); 
-                        <Redirect to="/admin" />
-                        }}> Logout </li>
+                    <li onClick={() => logout()}> Logout </li>
                     </div>
                 </ul>
             </div>

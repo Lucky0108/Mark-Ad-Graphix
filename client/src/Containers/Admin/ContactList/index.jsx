@@ -33,6 +33,8 @@ const ContactList = (props) => {
     removeQuery(_id)
     .then((res) => {
       setLoading(false)
+        // eslint-disable-next-line no-restricted-globals
+        location.reload()
     })
     .catch((err) => {
       setLoading(false)

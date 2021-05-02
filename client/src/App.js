@@ -39,7 +39,6 @@ function App() {
   useEffect(() => {
     // Go To Top Of Page When Component or Location Changes
     window.scrollTo(0,0);
-    // console.log(location)
   }, [location])
 
   const NavbarCheck = () => {

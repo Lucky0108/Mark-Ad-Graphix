@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { check, body } = require('express-validator');
 const { isSignedin } = require('../controllers/auth');
-const { setQuery, getQuery } = require('../controllers/query');
+const { setQuery, getQuery, removeQuery } = require('../controllers/query');
 
 router.post('/create/query',[
     check("name","Name should have atleast 2 characters").isLength({ min:3 }),
@@ -13,5 +13,7 @@ router.post('/create/query',[
 ], setQuery)
 
 router.get('/getquery', isSignedin, getQuery);
+
+router.delete('/removequery', isSignedin,removeQuery);
 
 module.exports = router;

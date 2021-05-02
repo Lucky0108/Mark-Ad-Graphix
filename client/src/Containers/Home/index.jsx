@@ -48,7 +48,6 @@ const Home = (props) => {
   const [clientHeading, setClientHeading] = useState(false);
 
   const scrollCoord = () => {
-    // console.log(window.scrollY)
     if(window.scrollY >= 200 && window.scrollY <= 1150) {
       setServiceHeading(true)
     } else {

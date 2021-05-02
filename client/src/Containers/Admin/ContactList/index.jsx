@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { toast } from 'react-toastify';
-import { Table } from 'react-bootstrap'
+import { Button, Table } from 'react-bootstrap'
 import AdminLeftPanel from '../../../Components/UI/AdminLeftPanel'
-import { contactList } from '../../../user/user'
+import { contactList, removeQuery } from '../../../user/user'
 import './ContactList.css'
 
 /**
@@ -17,9 +17,9 @@ const ContactList = (props) => {
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState(false);
 
-  useEffect(() => {
+  const loadQueries = () => {
     setLoading(true)
-    contactList()
+      contactList()
       .then((res) => { 
         setLoading(false)
         setQueryList(res.data.queries);
@@ -27,14 +27,28 @@ const ContactList = (props) => {
       .catch((err) => { 
         setLoading(false)
         toast.error(err.response.data.message)
-        setErrorMessage(false)
       })
-  }, [])
+  }
+
+  const queryDelete = (_id) => {
+    setLoading(true)
+    removeQuery(_id)
+    .then((res) => {
+      setLoading(false)
+       // eslint-disable-next-line no-restricted-globals
+       location.reload()
+    })
+    .catch((err) => {
+      setLoading(false)
+      setErrorMessage(err.response.data.message)
+       // eslint-disable-next-line no-restricted-globals
+       location.reload()
+    })
+  }
 
   const renderQueryList = () => {
     return loading ? toastId.current = toast.info("Loading...", {autoClose: false}) : (
       toast.dismiss(toastId.current),
-      toast.success("Queries Succfully Loaded!", {autoClose: 2000}),
       queryList.map((query, index) => {
         return (
         <tr key={index}>
@@ -46,22 +60,29 @@ const ContactList = (props) => {
           <td>{query.country ? query.country : '-'} </td>
           <td>{query.Interest ? query.Interest : '-'} </td>
           <td><textarea rows="3" id="address" style={{minWidth: "100%", resize:"none", backgroundColor: "#fff"}} value={query.message} disabled /> </td>
+          <td><Button variant="outline-success" onClick={queryDelete.bind(this,query._id)}> Resolved </Button> </td>
         </tr>
         )
       })
     )
-   
   }
 
+  // loadQueries()
+  useEffect(() => {
+    loadQueries()
+  }, [])
+
+
+
   return(
+    <>
     <AdminLeftPanel>
-      
       <div className="contact-list-wrap">
       <div style={{marginTop: "30px"}}> 
       {errorMessage ? errorMessage :  
         <Table bordered hover responsive="sm">
           <thead>
-            <tr>
+            <tr className="text-center">
               <th>#</th>
               <th>Name</th>
               <th>Email</th>
@@ -70,6 +91,7 @@ const ContactList = (props) => {
               <th>Country</th>
               <th>Requirement</th>
               <th>Message</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
@@ -79,6 +101,7 @@ const ContactList = (props) => {
       </div>
       </div>
     </AdminLeftPanel>
+   </>
    )
   }
 

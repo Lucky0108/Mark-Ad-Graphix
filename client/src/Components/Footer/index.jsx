@@ -115,7 +115,7 @@ const Footer = (props) => {
                   <div className="subscribe-input-div">
                     <form style={{ display: "contents" }} onSubmit={submitMail}>
                     <input type="email" className="form-control subscribe-input" placeholder="Email address" onChange={(e) => setEmail(e.target.value)} value={email} required/>
-                    <button className="subscribe-submit-btn"></button>
+                    <button className="subscribe-submit-btn" aria-label="Newsletter Submit"></button>
                     </form>
                   </div>
                 </Col>

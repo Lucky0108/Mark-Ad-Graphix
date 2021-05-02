@@ -277,7 +277,7 @@ const Home = (props) => {
       {/* Testimonial Section */}
       <section className="testimonial-section">
         <div className="testimonial-wrap">
-          <img className="testimonial-bg" src={testimonialBg} alt=" " />
+          <img className="testimonial-bg" src={testimonialBg} alt="Testimonial Background" />
           <div className="contentDiv">
               <div className="layer">
                 <Container>

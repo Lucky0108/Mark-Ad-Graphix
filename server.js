@@ -5,6 +5,7 @@ const path = require('path');
 const cors = require('cors');
 const env = require('dotenv');
 const cookieParser = require('cookie-parser');
+const compression = require('compression');
 
 // Environemt variable configure
 env.config();
@@ -30,6 +31,7 @@ mongoose.connect(
     })
 
 // Route Setups
+app.use(compression());
 app.use(express.json());
 app.use(cors());
 app.use(cookieParser());
@@ -39,21 +41,8 @@ app.use('/api',newsletterRoutes);
 
 // Serve static assets if in production
 if(process.env.NODE_ENV === 'production') {
-
-    // app.use(
-    //     expressStaticGzip(path.resolve(__dirname, 'client','build'), {
-    //     enableBrotli: true, // only if you have brotli files too
-    //     }),
-    //   );
-
     // Set static folder
     app.use(express.static('client/build'));
-
-    app.get('*.js', function (req, res, next) {
-        req.url = req.url + '.gz';
-        res.set('Content-Encoding', 'gzip');
-        next();
-      });
 
     app.get('*', (req,res) => {
         res.sendFile(path.resolve(__dirname, 'client','build','index.html'));

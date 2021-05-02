@@ -26,7 +26,11 @@ const AdminLeftPanel = (props) => {
                     <li><NavLink exact to="/admin/newsletter" className="admin-panel-link nav-link" activeClassName="admin-panel-active"></NavLink> Newsletter </li>
                     </div>
                     <div className="logout-div">
-                    <li onClick={() => logout()}> Logout </li>
+                    <li onClick={() => { 
+                        logout();
+                        // eslint-disable-next-line no-restricted-globals
+                        location.reload(); 
+                        }}> Logout </li>
                     </div>
                 </ul>
             </div>

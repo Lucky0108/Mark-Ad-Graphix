@@ -1,4 +1,3 @@
-import { Redirect } from 'react-router';
 import axios from '../helper/axios';
 
 // Main Api
@@ -49,7 +48,6 @@ export const logout = () => {
   const res = axios.post('/admin/logout')
     res.then(response => { return response })
     res.catch(err => {return err});
-    <Redirect to="/admin" />
   return res;
 }
 
@@ -69,12 +67,13 @@ export const authenticate = (data, next) => {
     if(typeof window !== "undefined") {
         localStorage.setItem("jwt", JSON.stringify(data));
         localStorage.setItem("token", JSON.stringify(data.token));
+        document.cookie=`token= ${data.token}`
         next();
     }
 };
 
 export const isAuthenticated = () => {
-  const cookieToken = getCookie("token")
+  const cookieToken = getCookie(" token")
   if (typeof window == "undefined") {
       return false;
   }

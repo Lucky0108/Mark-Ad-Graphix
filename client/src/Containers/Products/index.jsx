@@ -37,7 +37,6 @@ import acp11 from '../../img/products/acp-11.jpg'
 import acp12 from '../../img/products/acp-12.jpg'
 import acp13 from '../../img/products/acp-13.jpg'
 import acp14 from '../../img/products/acp-14.jpg'
-// import acp15 from '../../img/products/acp-15.jpg'
 
 
 // Component Import
@@ -100,7 +99,7 @@ const Products = (props) => {
           <img src={acp10} alt="Banner Stand 3" />
         </div>
           <div className="product-card-div" onClick={() => pro4 ? (() => clearState(), setProduct({ pro4: false})) : (() => clearState(), setProduct({ pro4: true})) } > <ProductCard name="ACP Signage" img={acp12} /> </div>
-          <div className="product-card-div" onClick={() => pro5 ? (() => clearState(), setProduct({ pro5: false})) : (() => clearState(), setProduct({ pro5: true})) } > <ProductCard name="Posters" img={poster1} /> </div>
+          <div className="product-card-div" onClick={() => pro5 ? (() => clearState(), setProduct({ pro5: false})) : (() => clearState(), setProduct({ pro5: true})) } > <ProductCard name="Clip On Frame" img={poster1} /> </div>
         </div>
         <div className="products-displays" style={ pro4 ? {display: "flex"} : {display: "none"}}>
           <img src={acp1} alt="Acp Signage 1" />

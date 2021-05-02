@@ -4,7 +4,8 @@ import { Col, InputGroup, FormControl, Form, Button } from 'react-bootstrap';
 import { isAuthenticated, updateUser } from '../../../user/user';
 import './Profile.css';
 import AdminLeftPanel from '../../../Components/UI/AdminLeftPanel';
-import profileImg from '../../../img/lakshay.webp'
+// import profileImg from '../../../img/lakshay.webp'
+import profileImg from '../../../img/default.jpg'
 
 /**
 * @author

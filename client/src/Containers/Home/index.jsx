@@ -284,7 +284,6 @@ const Home = (props) => {
                   <Row>
                     <HomeSectionsHeading headingClass="active" heading="Testimonials" para="This is what our clients say about us!" />
                     <Swiper
-                      onSwiper={(swiper) => console.log(swiper)}
                       autoplay = {{ delay: 2500, disableOnInteraction: false}}
                     >
                       <SwiperSlide>

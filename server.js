@@ -5,7 +5,7 @@ const path = require('path');
 const cors = require('cors');
 const env = require('dotenv');
 const cookieParser = require('cookie-parser');
-// const compression = require('compression');
+const compression = require('compression');
 
 // Environemt variable configure
 env.config();
@@ -31,7 +31,7 @@ mongoose.connect(
     })
 
 // Route Setups
-// app.use(compression());
+app.use(compression());
 app.use(express.json());
 app.use(cors());
 app.use(cookieParser());

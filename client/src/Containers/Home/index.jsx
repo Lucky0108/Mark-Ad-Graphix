@@ -7,9 +7,9 @@ import Typewriter from "typewriter-effect";
 import introVid from '../../img/intro.mp4'
 import aboutVid from '../../img/about.mp4'
 import testimonialBg from '../../img/testimonial-bg.jpg'
-import pro1 from '../../img/download.jfif'
-import pro2 from '../../img/pro2.jfif'
-import pro3 from '../../img/pro3.jfif'
+import acp1 from '../../img/products/acp-1.jpg'
+import led1 from '../../img/products/led-1.jpg'
+import window1 from '../../img/products/window-1.jpg'
 import client1 from '../../img/allen-solly.png'
 import client2 from '../../img/trends.png'
 import client3 from '../../img/Louis.png'
@@ -165,7 +165,7 @@ const Home = (props) => {
                 >
                   <SwiperSlide>
                     <div className="product-slider-img">
-                      <img src={pro1} alt="Acp Signs" />
+                      <img src={acp1} alt="Acp Signs" />
                     </div>
                     <div className="product-slider-content">
                       <div className="product-slider-title">
@@ -179,7 +179,7 @@ const Home = (props) => {
                   </SwiperSlide>
                   <SwiperSlide>
                     <div className="product-slider-img">
-                      <img src={pro2} alt="Neon Sign" />
+                      <img src={led1} alt="Neon Sign" />
                     </div>
                     <div className="product-slider-content">
                       <div className="product-slider-title">
@@ -193,7 +193,7 @@ const Home = (props) => {
                   </SwiperSlide>
                   <SwiperSlide>
                     <div className="product-slider-img">
-                      <img src={pro3} alt="Banner Stands" />
+                      <img src={window1} alt="Banner Stands" />
                     </div>
                     <div className="product-slider-content">
                       <div className="product-slider-title">

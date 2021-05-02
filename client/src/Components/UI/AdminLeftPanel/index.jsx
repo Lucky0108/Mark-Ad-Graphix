@@ -19,12 +19,7 @@ const AdminLeftPanel = (props) => {
                 <ul className="admin-left-panel-list">
                     <div className="left-main-links">
                     <li><NavLink to="/admin/profile" className="admin-panel-link nav-link" activeClassName="admin-panel-active"></NavLink> Profile</li>
-                    <li 
-                    // onClick={() => 
-                        // eslint-disable-next-line no-restricted-globals
-                        // location.reload()} 
-                        >
-                        <NavLink exact to="/admin/contacts" className="admin-panel-link nav-link" activeClassName="admin-panel-active"></NavLink> Contact Items </li>
+                    <li><NavLink exact to="/admin/contacts" className="admin-panel-link nav-link" activeClassName="admin-panel-active"></NavLink> Contact Items </li>
                     <li><NavLink exact to="/admin/newsletter" className="admin-panel-link nav-link" activeClassName="admin-panel-active"></NavLink> Newsletter </li>
                     </div>
                     <div className="logout-div">

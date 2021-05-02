@@ -43,7 +43,7 @@ const Login = (props) => {
 
   const checkRedirect = () => {
     if(isAuthenticated()) {
-      return <Redirect to="/admin/profile" />
+      return <a href="/admin/profile"> </a>
     } else {
       return <Redirect to="/admin" />
     }

@@ -47,6 +47,6 @@
     ]
   },
   "devDependencies": {
-    "compression-webpack-plugin": "^7.1.2"
+    "compression-webpack-plugin": "6.0.0"
   }
 }

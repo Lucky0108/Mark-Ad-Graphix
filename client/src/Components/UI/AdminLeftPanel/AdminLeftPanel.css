@@ -41,15 +41,14 @@
     opacity: 1 !important;
 }
 
-/* .logout-div:hover .logout-div li::before {
-    content: "";
-    background: hsla(0,0%,100%,.1);
-    width: 90%;
-    height: 43px;
-    border-radius: 43px;
-    position: absolute;
-    left: 5%;
-} */
+.left-main-links {
+    display: flex;
+    flex-direction: row;
+}
+
+.logout-div {
+    padding-top: 1rem;
+}
 
 .AdminLeftPanel-section ~ #whatsapp-widget, .AdminLeftPanel-section ~ #back-top {
     display: none !important;

@@ -87,7 +87,7 @@ const Profile = (props) => {
           <Col md={5} lg={5} sm={12}>
             <InputGroup className="mb-3">
             <Form.Label>Email address</Form.Label>
-              <FormControl type="email" placeholder="Email Address" value={email} onChange={handleChange("phone")}  className="profile-input" disabled={edit ? false: true} />
+              <FormControl type="email" placeholder="Email Address" value={email} onChange={handleChange("email")}  className="profile-input" disabled={edit ? false: true} />
             </InputGroup>
           </Col>
           <Col md={5} lg={5} sm={12}>

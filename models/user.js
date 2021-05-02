@@ -42,14 +42,4 @@ UserSchema.methods = {
     }
 }
 
-UserSchema.pre("findByIdAndUpdate", function(next) {
-    console.log(JSON.stringify(this._update), this._update.password);
-    // if(this._update.password) {
-    //     this.hash_password = bcrypt.hashSync(this._update.password, 10);
-    //     next(); 
-    // } else {
-    //     next();
-    // }
-})
-
 module.exports = mongoose.model("User", UserSchema);

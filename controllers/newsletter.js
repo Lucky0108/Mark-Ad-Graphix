@@ -34,11 +34,9 @@ exports.setNewsletter = (req,res) => {
                     text: "Congratulations! You're Successfully Subscribed to Mark Ad Grafix Newsletter. You'll start receiving our newsletters very soon."
                   },function (errorMsg, info) {
                     if (errorMsg) {
-                      console.log(errorMsg);
                       Mail.findOneAndDelete({ email: data.email })
                       return res.status(400).json({ message: errorMsg || "Something Went Wrong" })
                     } else {
-                      console.log('Email sent: ' + info.response);
                       return res.status(201).json({ message: "Succesfully subscribed To Our Newsletter!", data: data })
                     }
                   });

@@ -28,10 +28,8 @@ exports.setQuery = (req,res) =>{
                 html: `Name: ${data.name} <br>Email: ${data.email} <br>Subject: ${data.subject} <br>Phone: ${data.phone} <br>Country: ${data.country} <br>Interest: ${data.Interest} <br>Message: ${data.message}`
             }, function (errorMsg, info) {
                 if (errorMsg) {
-                  console.log(errorMsg);
                   return res.status(400).json({ message: errorMsg })
                 } else {
-                  console.log('Email sent: ' + info.response);
                   return res.status(201).json({ message:"Query registered succesfully! We'll contact you at the earliest!", data: data })
                 }
             });

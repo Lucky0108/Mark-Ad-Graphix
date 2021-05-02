@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Button, Card, Col, Form } from 'react-bootstrap';
 import { Link, Redirect } from 'react-router-dom';
-import logoImg from '../../../img/logo2.png'
+import logoImg from '../../../img/logo2.webp'
 import { authenticate, isAuthenticated, login } from '../../../user/user';
 import { toast } from 'react-toastify';
 import './Login.css';

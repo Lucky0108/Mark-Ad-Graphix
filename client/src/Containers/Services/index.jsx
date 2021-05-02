@@ -3,10 +3,10 @@ import React from 'react'
 import './Service.css'
 import PageTitle from '../../Components/UI/PageTitle'
 import { Container, Row, Col } from 'react-bootstrap';
-import service1 from '../../img/solvent.jpg'
-import service2 from '../../img/eco-solvent.png'
-import service3 from '../../img/multi-print.jpg';
-import service4 from '../../img/digital.jpg';
+import service1 from '../../img/solvent.webp'
+import service2 from '../../img/eco-solvent.webp'
+import service3 from '../../img/multi-print.webp';
+import service4 from '../../img/digital.webp';
 /**
 * @author
 * @function Services

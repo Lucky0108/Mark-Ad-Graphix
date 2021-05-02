@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
-import logoImg from '../../img/logo.png';
+import logoImg from '../../img/logo.webp';
 
 /**
 * @author

@@ -1,9 +1,9 @@
 import React from 'react';
 import './About.css';
 import PageTitle from '../../Components/UI/PageTitle';
-import about1 from '../../img/about-1.jpg';
-import about2 from '../../img/about-2.jpg';
-import about3 from '../../img/about-3.jpg';
+import about1 from '../../img/about-1.webp';
+import about2 from '../../img/about-2.webp';
+import about3 from '../../img/about-3.webp';
 import { Container, Row, Col } from 'react-bootstrap';
 
 /**

@@ -5,7 +5,7 @@ import { isAuthenticated, updateUser } from '../../../user/user';
 import './Profile.css';
 import AdminLeftPanel from '../../../Components/UI/AdminLeftPanel';
 // import profileImg from '../../../img/lakshay.webp'
-import profileImg from '../../../img/default.jpg'
+import profileImg from '../../../img/default.webp'
 
 /**
 * @author

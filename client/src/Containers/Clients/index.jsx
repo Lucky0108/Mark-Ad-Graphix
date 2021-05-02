@@ -6,17 +6,17 @@ import PageTitle from '../../Components/UI/PageTitle';
 import ClientImageWrap from '../../Components/UI/ClientImageWrap';
 
 // Media Import
-import client1 from '../../img/allen-solly.png'
-import client2 from '../../img/trends.png'
-import client3 from '../../img/Louis.png'
-import client4 from '../../img/van-heusen.png'
-import client5 from '../../img/planet.jpg'
-import client6 from '../../img/stanmax.png'
-import client7 from '../../img/wls.jpg'
-import client8 from '../../img/johnplayers.jpg'
-import client9 from '../../img/gitanjali.png'
-import client10 from '../../img/cantabil.jpg'
-import client11 from '../../img/levis.png'
+import client1 from '../../img/allen-solly.webp'
+import client2 from '../../img/trends.webp'
+import client3 from '../../img/Louis.webp'
+import client4 from '../../img/van-heusen.webp'
+import client5 from '../../img/planet.webp'
+import client6 from '../../img/stanmax.webp'
+import client7 from '../../img/wls.webp'
+import client8 from '../../img/johnplayers.webp'
+import client9 from '../../img/gitanjali.webp'
+import client10 from '../../img/cantabil.webp'
+import client11 from '../../img/levis.webp'
 
 /**
 * @author

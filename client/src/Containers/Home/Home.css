@@ -212,7 +212,7 @@
 
 .home-product-section {
     height: 756px;
-    background-image: url('../../img/product-bg.jpg');
+    background-image: url('../../img/product-bg.webp');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -346,7 +346,7 @@
 
 .home-client-section {
     height: 824px;
-    background-image: url('../../img/client-bg.jpg');
+    background-image: url('../../img/client-bg.webp');
     background-repeat: no-repeat;
     background-size: cover;
 }

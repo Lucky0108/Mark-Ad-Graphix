@@ -37,6 +37,13 @@ export const contactList = () => {
   return res;
 }
 
+export const getNewsletter = () => {
+  const res = axios.get('/getNewsletter')
+    res.then(response => { return response })
+    res.catch(err => { return err });
+  return res;
+}
+
 export const removeQuery = _id => {
   const res = axios.delete('/removequery', { data: { _id : _id} })
     res.then(response => { return response })

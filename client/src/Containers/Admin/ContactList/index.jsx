@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { toast } from 'react-toastify';
 import { Button, Table } from 'react-bootstrap'
 import AdminLeftPanel from '../../../Components/UI/AdminLeftPanel'
 import { contactList, removeQuery } from '../../../user/user'
@@ -12,7 +11,6 @@ import './ContactList.css'
 
 const ContactList = (props) => {
 
-  const toastId = React.useRef(null);
   const [queryList, setQueryList] = useState([]);
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState(false);
@@ -26,7 +24,7 @@ const ContactList = (props) => {
       })
       .catch((err) => { 
         setLoading(false)
-        toast.error(err.response.data.message)
+        setErrorMessage(err.response.data.message)
       })
   }
 
@@ -47,9 +45,7 @@ const ContactList = (props) => {
   }
 
   const renderQueryList = () => {
-    return loading ? toastId.current = toast.info("Loading...", {autoClose: false}) : (
-      toast.dismiss(toastId.current),
-      queryList.map((query, index) => {
+    return queryList.map((query, index) => {
         return (
         <tr key={index}>
           <td>{index + 1}</td>
@@ -64,7 +60,6 @@ const ContactList = (props) => {
         </tr>
         )
       })
-    )
   }
 
   // loadQueries()
@@ -78,27 +73,26 @@ const ContactList = (props) => {
     <>
     <AdminLeftPanel>
       <div className="contact-list-wrap">
-      <div style={{marginTop: "30px"}}> 
-      {errorMessage ? errorMessage :  
-        <Table bordered hover responsive="sm">
-          <thead>
-            <tr className="text-center">
-              <th>#</th>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Subject</th>
-              <th>Phone</th>
-              <th>Country</th>
-              <th>Requirement</th>
-              <th>Message</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-          {renderQueryList()}
-          </tbody>
-        </Table>} 
-      </div>
+        {errorMessage ? errorMessage :
+         <Table bordered hover responsive="sm">
+         <thead>
+           <tr className="text-center">
+             <th>#</th>
+             <th>Name</th>
+             <th>Email</th>
+             <th>Subject</th>
+             <th>Phone</th>
+             <th>Country</th>
+             <th>Requirement</th>
+             <th>Message</th>
+             <th>Action</th>
+           </tr>
+         </thead>
+         <tbody>
+         {loading ? <p>Loading...</p> : renderQueryList()}
+         </tbody>
+       </Table>
+        }
       </div>
     </AdminLeftPanel>
    </>

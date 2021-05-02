@@ -39,8 +39,21 @@ app.use('/api',newsletterRoutes);
 
 // Serve static assets if in production
 if(process.env.NODE_ENV === 'production') {
+
+    // app.use(
+    //     expressStaticGzip(path.resolve(__dirname, 'client','build'), {
+    //     enableBrotli: true, // only if you have brotli files too
+    //     }),
+    //   );
+
     // Set static folder
     app.use(express.static('client/build'));
+
+    app.get('*.js', function (req, res, next) {
+        req.url = req.url + '.gz';
+        res.set('Content-Encoding', 'gzip');
+        next();
+      });
 
     app.get('*', (req,res) => {
         res.sendFile(path.resolve(__dirname, 'client','build','index.html'));

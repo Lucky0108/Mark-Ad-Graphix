@@ -22,12 +22,13 @@ const Profile = (props) => {
     lastName: user.lastName,
     phone: user.phone,
     _id: user._id,
+    email: user.email,
     error: false,
     loading: false,
     response: false
   });
 
-  const { firstName, lastName, phone, _id, error, loading, response } = values;
+  const { firstName, lastName, phone, _id, email, error, loading, response } = values;
 
   const handleChange = name => event => {
     setValues({ ...values, error: false, [name]: event.target.value })
@@ -36,7 +37,7 @@ const Profile = (props) => {
   const editForm = (e) => {
     e.preventDefault();
    setValues({ ...values, error: false, loading: true })
-   updateUser({ firstName, lastName, phone, _id })
+   updateUser({ firstName, lastName, phone, _id, email })
    .then((data) => { 
       setEdit(false)
       setValues({ ...values, response: data.data.message, loading: false })
@@ -86,7 +87,7 @@ const Profile = (props) => {
           <Col md={5} lg={5} sm={12}>
             <InputGroup className="mb-3">
             <Form.Label>Email address</Form.Label>
-              <FormControl type="email" placeholder="Email Address" value={user.email}  className="profile-input" disabled />
+              <FormControl type="email" placeholder="Email Address" value={email} onChange={handleChange("phone")}  className="profile-input" disabled={edit ? false: true} />
             </InputGroup>
           </Col>
           <Col md={5} lg={5} sm={12}>

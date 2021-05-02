@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 import { Col, Row } from 'react-bootstrap'
+import { logout } from '../../../user/user';
 import './AdminLeftPanel.css'
 
 /**
@@ -16,12 +17,17 @@ const AdminLeftPanel = (props) => {
         <Col md={3} lg={3} sm={12}>
             <div className="admin-left-panel">
                 <ul className="admin-left-panel-list">
+                    <div className="left-main-links">
                     <li><NavLink to="/admin/profile" className="admin-panel-link nav-link" activeClassName="admin-panel-active"></NavLink> Profile</li>
                     <li onClick={() => 
                         // eslint-disable-next-line no-restricted-globals
                         location.reload()} >
                         <NavLink exact to="/admin/contacts" className="admin-panel-link nav-link" activeClassName="admin-panel-active"></NavLink> Contact Items </li>
                     <li><NavLink exact to="/admin/newsletter" className="admin-panel-link nav-link" activeClassName="admin-panel-active"></NavLink> Newsletter </li>
+                    </div>
+                    <div className="logout-div">
+                    <li onClick={() => logout()}> Logout </li>
+                    </div>
                 </ul>
             </div>
         </Col>

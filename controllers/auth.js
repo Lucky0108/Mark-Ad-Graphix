@@ -83,7 +83,7 @@ exports.updateUser = (req,res) => {
 
 exports.signout = (req,res) => {
     res.clearCookie("token");
-    res.status(200).json({ message: "Logout Success!" })
+    return res.status(200).json({ message: "Logout Success!" })
 }
 
 

@@ -44,6 +44,13 @@ export const removeQuery = _id => {
   return res;
 }
 
+export const logout = () => {
+  const res = axios.post('/admin/logout')
+    res.then(response => { return response })
+    res.catch(err => {return err});
+  return res;
+}
+
 // Authenticate 
 
 export const getCookie = (cName) => {

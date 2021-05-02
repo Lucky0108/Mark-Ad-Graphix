@@ -13,6 +13,8 @@
 .admin-left-panel-list {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .admin-left-panel li {
@@ -21,6 +23,7 @@
     padding: 15px 20px;
     font-size: 1.1rem;
     position: relative;
+    cursor: pointer;
 }
 
 .admin-left-panel li a::before {
@@ -37,6 +40,16 @@
 .admin-panel-active::before {
     opacity: 1 !important;
 }
+
+/* .logout-div:hover .logout-div li::before {
+    content: "";
+    background: hsla(0,0%,100%,.1);
+    width: 90%;
+    height: 43px;
+    border-radius: 43px;
+    position: absolute;
+    left: 5%;
+} */
 
 .AdminLeftPanel-section ~ #whatsapp-widget, .AdminLeftPanel-section ~ #back-top {
     display: none !important;

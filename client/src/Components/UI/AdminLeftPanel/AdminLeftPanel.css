@@ -41,15 +41,6 @@
     opacity: 1 !important;
 }
 
-.left-main-links {
-    display: flex;
-    flex-direction: row;
-}
-
-.logout-div {
-    padding-top: 1rem;
-}
-
 .AdminLeftPanel-section ~ #whatsapp-widget, .AdminLeftPanel-section ~ #back-top {
     display: none !important;
 }
@@ -71,6 +62,15 @@
 
     .admin-left-panel li a::before {
         left: 6%;
+    }
+
+    .left-main-links {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .logout-div {
+        padding-top: 1rem;
     }
 }
 

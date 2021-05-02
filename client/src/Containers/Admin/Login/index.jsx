@@ -35,6 +35,8 @@ const Login = (props) => {
     login({ email, password })
       .then((user) => {
         authenticate(user.data, () => setValues({ email: "", password: "", response: true, loading: false }))
+        // eslint-disable-next-line no-restricted-globals
+        location.reload()
       }) 
       .catch((err) => {
         setValues({ ...values, error: err.response.data.message, loading: false })
@@ -43,7 +45,7 @@ const Login = (props) => {
 
   const checkRedirect = () => {
     if(isAuthenticated()) {
-      return <a href="/admin/profile"> </a>
+      return <Redirect to="/admin/profile" />
     } else {
       return <Redirect to="/admin" />
     }

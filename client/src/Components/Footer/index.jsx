@@ -22,7 +22,7 @@ const Footer = (props) => {
 
     // 2-D Array for Footer Icons List having links and Respective Name
     const SocialIconList = [
-      ["https://wa.me/+919810191865", "fa-whatsapp"], ["https://www.linkedin.com/company/mark-ad-grafix/", "fa-linkedin"] 
+      ["https://wa.me/+919891433344", "fa-whatsapp"], ["https://www.linkedin.com/in/lakshay-yadav", "fa-linkedin"] 
     ]     
 
     // variable to render Links List
@@ -81,13 +81,13 @@ const Footer = (props) => {
             <Container>
             <Row>
               <FooterCol  mainDiv="address-div" icon="fa-map-marker" contentDivName="address-div-content" heading="Find us:" 
-                span={ <span className="contact-address">Site 4, Plot No. 4/8, Sahibabad, Ghaziabad, Uttar Pradesh 201010 <a className="address-btn" target="_blank" href="https://goo.gl/maps/oGYKip3cooD4Kp588" rel="noopener noreferrer" > Get Directions &nbsp; <i className="fa fa-location-arrow" aria-hidden="true"></i> </a> </span>} 
+                span={ <span className="contact-address">Delhi, India <a className="address-btn" target="_blank" href="https://goo.gl/maps/" rel="noopener noreferrer" > Get Directions &nbsp; <i className="fa fa-location-arrow" aria-hidden="true"></i> </a> </span>} 
               />
               <FooterCol mainDiv="contact-div" icon="fa-phone" contentDivName="contact-div-content" heading="Call us:" 
-                span={  <span className="contact-phone"> <a href="tel:+919810191865" target="_blank" rel="noopener noreferrer">+91 9810191865</a> <span>, </span> <a href="tel:0120-4241246" className="ml-5px" target="_blank" rel="noopener noreferrer">0120-4241246</a> <div className="contact-whatsapp"> <a href="https://wa.me/+919810191865" target="_blank" rel="noopener noreferrer"> <i className="fa fa-whatsapp"></i> &nbsp; +91 9810191865</a> </div> </span>} 
+                span={  <span className="contact-phone"> <a href="tel:+919891433344" target="_blank" rel="noopener noreferrer">+91 9891433344</a> <span>, </span> <a href="tel:0120-4241246" className="ml-5px" target="_blank" rel="noopener noreferrer">0120-00000000</a> <div className="contact-whatsapp"> <a href="https://wa.me/+919891433344" target="_blank" rel="noopener noreferrer"> <i className="fa fa-whatsapp"></i> &nbsp; +91 9891433344</a> </div> </span>} 
               />   
               <FooterCol mainDiv="mail-div" icon="fa-envelope-o" contentDivName="mail-div-content" heading="Mail us:" 
-                span={  <span className="contact-mail"> <a href="mailto:markadgrafix@gmail.com" target="_blank" rel="noopener noreferrer">markadgrafix@gmail.com</a> </span> } 
+                span={  <span className="contact-mail"> <a href="mailto:raolakshayyadav02@gmail.com" target="_blank" rel="noopener noreferrer">raolakshayyadav02@gmail.com</a> </span> } 
               />                   
 
             </Row>
@@ -126,7 +126,7 @@ const Footer = (props) => {
         </div>
         <div className="footer-copyright-wrap clearfix">
             Copyright © 2021 | Mark Ad Grapfix. All Rights Reserved. 
-            Designed By <a href="https://lakshayyadav.me" target="_blank" rel="noopener noreferrer">LAKSHAY</a>
+            Designed By <a href="https://lakshayyadav.tech" target="_blank" rel="noopener noreferrer">LAKSHAY</a>
         </div>
       </section>      
     </footer>

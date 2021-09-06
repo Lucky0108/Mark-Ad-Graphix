@@ -80,22 +80,22 @@ const Contact = (props) => {
                   <i className="fa fa-map-marker"></i>
                   <div className="contact-box-content">
                     <b>Corporate Office: </b>
-                    Site 4, Plot No. 4/8, Sahibabad, Ghaziabad, Uttar Pradesh 201010 (INDIA)
+                    Delhi, India
                   </div>
                 </div>
                 <div className="contact-box">
                   <i className="fa fa-envelope-o"></i>
-                  <a className="contact-box-content" href="mailto:info@markadgrafix.in" target="_blank" rel="noopener noreferrer"> markadgrafix@gmail.com</a>
+                  <a className="contact-box-content" href="mailto:raolakshayyadav02@gmail.com" target="_blank" rel="noopener noreferrer"> raolakshayyadav02@gmail.com</a>
                 </div>
                 <div className="contact-box">
                   <i className="fa fa-phone"></i>
-                  <a href="tel: +919810191865" className="contact-box-content" target="_blank" rel="noopener noreferrer"> +91 9810191865</a>, &nbsp; <a href="tel: 0120-4241246" className="contact-box-content" target="_blank" rel="noopener noreferrer"> 0120-4241246</a>
+                  <a href="tel: +919891433344" className="contact-box-content" target="_blank" rel="noopener noreferrer"> +91 9891433344</a>, &nbsp; <a href="tel: 0120-0000000" className="contact-box-content" target="_blank" rel="noopener noreferrer"> 0120-0000000</a>
                 </div>
                 <div className="contact-box">
                   <i className="fa fa-thumbs-o-up"></i>
                   <div className="contact-box-content">
                     We appreciate every feedback.
-                    <b> ( <a href="https://www.google.com/search?q=mark+ad+grafix&tbm=lcl&sxsrf=ALeKk00Ydn6pDr_Lr5q0wUalyGM5CmrEAw%3A1618678801335&ei=ERR7YP32E_aR4-EP2Jqu8A0&oq=Mark&gs_l=psy-ab.3.1.35i39k1l3j0i67k1j0i273k1j0i67k1j0i273k1j0i433i67k1j0i263i433i20k1j0i433k1.22918.23519.0.24720.4.4.0.0.0.0.181.655.0j4.4.0....0...1c.1.64.psy-ab..0.4.653...0j0i433i131k1j0i263i20k1.0.WNOvl_cloN0#lrd=0x390cfb149c4b7d4f:0xdf92fc7ae9415531,3,,,&rlfi=hd:;si:16110216421887268145;mv:[[28.6799221,77.3215017],[28.6509752,77.2849947]]" className="contact-box-content" target="_blank" rel="noopener noreferrer">Review us </a> )</b>
+                    <b> ( <a href="https://www.google.com/" className="contact-box-content" target="_blank" rel="noopener noreferrer">Review us </a> )</b>
                   </div>
                 </div>
               </div>
@@ -139,7 +139,7 @@ const Contact = (props) => {
       </section>
       <section className="contact-map-section">
           <div style={{ width: "100%" }}>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.291970959898!2d77.31931301503673!3d28.650975182410445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfb149c4b7d4f%3A0xdf92fc7ae9415531!2sMark%20Ad%20Grafix!5e0!3m2!1sen!2sin!4v1618499140324!5m2!1sen!2sin" width="100%" height="600" frameBorder="0" style={{ border: "0" }} allowFullScreen title="Our Office" aria-hidden="false" tabIndex="0" ></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56003.82693238917!2d77.23198480543262!3d28.68249094376418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfb0f509c976f%3A0x9ec1dbe6a1f4fd3c!2sShahdara%2C%20Delhi!5e0!3m2!1sen!2sin!4v1630950497600!5m2!1sen!2sin" width="100%" height="600" frameBorder="0" style={{ border: "0" }} allowFullScreen title="Our Office" aria-hidden="false" tabIndex="0" ></iframe>
           </div>
       </section>
     </>
